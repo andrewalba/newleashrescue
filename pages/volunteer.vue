@@ -3,7 +3,6 @@ const runtimeConfig = useRuntimeConfig()
 import Phone from "~/components/Phone.vue"
 
 const email = runtimeConfig.public.email
-console.log(email)
 </script>
 
 <template>

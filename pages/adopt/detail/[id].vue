@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useAnimalsStore } from "~/stores/animals.store"
+import type { Animal } from "~/models"
 import {
   Carousel,
   Slide,
@@ -11,7 +12,8 @@ const route = useRoute()
 const animalStore = useAnimalsStore()
 
 await animalStore.show(parseInt(route.params.id.toString(), 10))
-const animal = animalStore.getAnimal
+const animal: Animal = animalStore.getAnimal
+const attributes = animalStore.getAttributes
 const petfinderOrgId = useRuntimeConfig().public.petfinderOrgId
 </script>
 
@@ -39,14 +41,22 @@ const petfinderOrgId = useRuntimeConfig().public.petfinderOrgId
             </Carousel>
 
             <h3>{{ animal.name }}</h3>
-            <div class="h3">
-              <span class="badge badge-primary" v-if="animal.breeds.primary">{{ animal.breeds.primary }}</span>
-              <span class="badge" v-if="animal.breeds.secondary">{{ animal.breeds.secondary }}</span>
-              <span class="badge" v-if="animal.breeds.mixed === true">Mixed</span>
+            <div v-if="animal.tags">
+              <span class="badge badge-primary" v-for="tag in animal.tags">
+                {{ tag }}
+              </span>
             </div>
             <hr/>
-            <p>{{ animal.description }}</p>
-<!--            <ul class="icons">
+            <div>
+              <NuxtLink :to="animal.url" :title="animal.name" class="button" target="_blank">
+                <i class="far fa-dog fa-top" v-if="animal.species === 'Dog'"></i>
+                <i class="far fa-cat fa-top" v-if="animal.species === 'Cat'"></i>
+                <i class="far fa-paw fa-top" v-if="animal.species !== 'Dog' && animal.species !== 'Cat'"></i> More Details
+              </NuxtLink>
+              <NuxtLink :to="'https://sap.petfinderfoundation.com/sponsor-a-pet/' + petfinderOrgId + '/US/US/' + animal.id + '/'" class="button alt" target="_blank"><i class="far fa-donate"></i> Sponsor Me</NuxtLink>
+              <NuxtLink :to="'https://www.petfinder.com/user/profile/create/?experience=loginAtEnd&source=adoptionInquiry&animalId=' + animal.id" class="button tertiary" target="_blank"><i class="far fa-paw"></i> Adopt Me</NuxtLink>
+            </div>
+            <!-- <ul class="icons">
               <li><NuxtLink :to="http://www.facebook.com/share.php?u={{ urlencode(@fbShareLink) }}" class="icon" title="Share on Facebook" target="_blank"><i class="fab fa-facebook"></i> <span class="label">Facebook</span></NuxtLink></li>
               <li><NuxtLink to="#" class="icon" title="" target="_blank"><i class="fab fa-twitter"></i> <span class="label">Twitter</span></NuxtLink></li>
               <li><NuxtLink to="#" class="icon" title="" target="_blank"><i class="fab fa-google"></i> <span class="label">Google</span></NuxtLink></li>
@@ -60,20 +70,22 @@ const petfinderOrgId = useRuntimeConfig().public.petfinderOrgId
 
           <!-- Sidebar -->
           <section id="sidebar" class="box">
-            <section>
-              <h3>Options</h3>
+            <section v-if="attributes">
+              <h3>Characteristics</h3>
               <ul>
-<!--                <check if="{{ @pet['options'] }}">
-                  <repeat group="{{ @pet['options'] }}" value="{{ @option }}">
-                      <li>{{ @option }}</li>
-                  </repeat>
-                </check>-->
+                <li v-for="attribute in attributes">
+                  {{ attribute }}
+                </li>
               </ul>
-              <footer>
-                <ul class="actions">
-                  <li><NuxtLink :to="'https://sap.petfinderfoundation.com/sponsor-a-pet/' + petfinderOrgId + '/US/US/' + animal.id + '/'" class="button small"><i class="far fa-donate"></i> Sponsor Me</NuxtLink></li>
-                </ul>
-              </footer>
+            </section>
+            <hr />
+            <section>
+              <h3>Breed</h3>
+              <ul class="alt">
+                <li v-if="animal.breeds.primary">{{ animal.breeds.primary }}</li>
+                <li v-if="animal.breeds.secondary">{{ animal.breeds.secondary }}</li>
+                <li v-if="animal.breeds.mixed === true">Mixed</li>
+              </ul>
             </section>
             <hr />
             <section>
@@ -83,11 +95,6 @@ const petfinderOrgId = useRuntimeConfig().public.petfinderOrgId
                 <li>Gender: {{ animal.gender }}</li>
                 <li>Size: {{ animal.size }}</li>
               </ul>
-              <footer>
-                <ul class="actions">
-                  <li><NuxtLink to="#" data-btn="contact" :data-petid="animal.id" data-contacttype="adopt" data-subject="adopt" class="button small"><i class="far fa-paw"></i> Adopt Me</NuxtLink></li>
-                </ul>
-              </footer>
             </section>
           </section>
 

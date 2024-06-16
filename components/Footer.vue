@@ -1,26 +1,35 @@
 <script>
 export default {
   mounted() {
-    console.log('loaded');
-    const droptronScript = document.createElement('script')
-    droptronScript.setAttribute('type', 'text/javascript')
-    droptronScript.setAttribute('src', '/assets/js/jquery.dropotron.min.js')
-    document.body.appendChild(droptronScript)
+    const jqueryScript = document.createElement('script')
+    jqueryScript.setAttribute('id', 'jquery')
+    jqueryScript.setAttribute('type', 'text/javascript')
+    jqueryScript.setAttribute('src', 'https://code.jquery.com/jquery-1.12.4.min.js')
+    jqueryScript.setAttribute('integrity', 'sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=')
+    jqueryScript.setAttribute('crossorigin', 'anonymous')
+    document.body.appendChild(jqueryScript)
 
-    const scrollexScript = document.createElement('script')
-    scrollexScript.setAttribute('type', 'text/javascript')
-    scrollexScript.setAttribute('src', '/assets/js/jquery.scrollex.min.js')
-    document.body.appendChild(scrollexScript)
+    document.getElementById('jquery')?.addEventListener('load', function () {
+      const droptronScript = document.createElement('script')
+      droptronScript.setAttribute('type', 'text/javascript')
+      droptronScript.setAttribute('src', '/assets/js/jquery.dropotron.min.js')
+      document.body.appendChild(droptronScript)
 
-    const utilScript = document.createElement('script')
-    utilScript.setAttribute('type', 'text/javascript')
-    utilScript.setAttribute('src', '/assets/js/util.js')
-    document.body.appendChild(utilScript)
+      const scrollexScript = document.createElement('script')
+      scrollexScript.setAttribute('type', 'text/javascript')
+      scrollexScript.setAttribute('src', '/assets/js/jquery.scrollex.min.js')
+      document.body.appendChild(scrollexScript)
 
-    const mainScript = document.createElement('script')
-    mainScript.setAttribute('type', 'text/javascript')
-    mainScript.setAttribute('src', '/assets/js/main.js')
-    document.body.appendChild(mainScript)
+      const utilScript = document.createElement('script')
+      utilScript.setAttribute('type', 'text/javascript')
+      utilScript.setAttribute('src', '/assets/js/util.js')
+      document.body.appendChild(utilScript)
+
+      const mainScript = document.createElement('script')
+      mainScript.setAttribute('type', 'text/javascript')
+      mainScript.setAttribute('src', '/assets/js/main.js')
+      document.body.appendChild(mainScript)
+    });
   }
 }
 </script>
