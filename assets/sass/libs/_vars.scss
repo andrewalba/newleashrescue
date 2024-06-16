@@ -18,7 +18,7 @@
 
 // Font. ('Source Sans Pro', Helvetica, sans-serif),
 	$font: (
-		family: 			('Open Sans', sans-serif),		
+		family: 			('Open Sans', sans-serif),
 		family-fun:			('Luckiest Guy', cursive),
 		family-fixed:		(monospace),
 		weight:				400,
@@ -59,17 +59,21 @@
 		),
 
 		accent4: (
+			border:			#c31f41,
+			border-bg:		mix(#c31f41, #ffffff, 85%),
+			border2-bg:		mix(#c31f41, #ffffff, 70%),
 			bg:				#c31f41,
 			fg:				mix(#c31f41, #ffffff, 15%),
 			fg-bold:		#ffffff,
-			fg-light:		mix(#c31f41, #ffffff, 30%)
+			fg-light:		mix(#c31f41, #ffffff, 30%),
+			fg-light2:		mix(#c31f41, #ffffff, 70%)
 		)
 	);
 
 // fonts and borders
 
 $font-weight-bold:            700 !default;
-$border-radius:               .25rem !default;
+$border-radius:               .5rem !default;
 $enable-rounded:            true !default;
 
 // colors
@@ -102,13 +106,13 @@ $grays: map-merge(
   $grays
 );
 
-$theme-orange: #e98b6c !default;
+$orange: #e98b6c !default;
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
+/*$orange:  #fd7e14 !default;*/
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
@@ -136,7 +140,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $theme-orange !default;
+$primary:       $orange !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -173,7 +177,7 @@ $yiq-text-light:            $white !default;
 
 // Badges
 
-$badge-font-size:                   75% !default;
+$badge-font-size:                   66% !default;
 $badge-font-weight:                 $font-weight-bold !default;
 $badge-padding-y:                   .5em !default;
 $badge-padding-x:                   .4em !default;
