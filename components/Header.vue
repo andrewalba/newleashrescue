@@ -7,7 +7,7 @@
     <h1><a href="/" title="New Leash Rescue">New Leash Rescue</a></h1>
     <nav id="nav">
       <ul>
-        <li><a href="/"><i class="far fa-home"></i> Home</a></li>
+        <li><a href="/"><i class="far fa-home fa-initial"></i> Home</a></li>
         <li>
           <NuxtLink to="/adopt" title="Adopt">Adopt</NuxtLink>
           <ul>

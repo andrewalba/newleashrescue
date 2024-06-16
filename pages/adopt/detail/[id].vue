@@ -49,9 +49,9 @@ const petfinderOrgId = useRuntimeConfig().public.petfinderOrgId
             <hr/>
             <div>
               <NuxtLink :to="animal.url" :title="animal.name" class="button" target="_blank">
-                <i class="far fa-dog fa-top" v-if="animal.species === 'Dog'"></i>
-                <i class="far fa-cat fa-top" v-if="animal.species === 'Cat'"></i>
-                <i class="far fa-paw fa-top" v-if="animal.species !== 'Dog' && animal.species !== 'Cat'"></i> More Details
+                <i class="far fa-dog fa-initial" v-if="animal.species === 'Dog'"></i>
+                <i class="far fa-cat fa-initial" v-if="animal.species === 'Cat'"></i>
+                <i class="far fa-paw fa-initial" v-if="animal.species !== 'Dog' && animal.species !== 'Cat'"></i> More Details
               </NuxtLink>
               <NuxtLink :to="'https://sap.petfinderfoundation.com/sponsor-a-pet/' + petfinderOrgId + '/US/US/' + animal.id + '/'" class="button alt" target="_blank"><i class="far fa-donate"></i> Sponsor Me</NuxtLink>
               <NuxtLink :to="'https://www.petfinder.com/user/profile/create/?experience=loginAtEnd&source=adoptionInquiry&animalId=' + animal.id" class="button tertiary" target="_blank"><i class="far fa-paw"></i> Adopt Me</NuxtLink>

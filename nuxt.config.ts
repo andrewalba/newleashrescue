@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       petfinderOrgId: process.env.PETFINDER_ORGANIZATION_ID,
     }
   },
-  ssr: false,
+  ssr: true,
   modules: [
     '@pinia/nuxt',
     '@nuxt/image',
