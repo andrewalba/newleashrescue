@@ -4,18 +4,6 @@
 	License: pixelarity.com/license
 */
 
-function slick_helper(element) {
-	$_this = $(element);
-	$_this.slick({ 
-		dots: true,
-		infinite: true,
-		slidesToShow: 1, 
-		autoplay: false,
-  		adaptiveHeight: true,
-  		//appendDots: $('.slider-nav')
-  	});
-}
-
 (function($) {
 
 	var	$window = $(window),
@@ -38,11 +26,6 @@ function slick_helper(element) {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
-			var class_name=".detail-images";
-			if ($(window).width() <= 481) {
-				class_name=".mobile-detail-images";
-			}
-			slick_helper(class_name);
 		});
 
 	// Dropdowns.
@@ -53,15 +36,15 @@ function slick_helper(element) {
 	// Nav Panel.
 
 		// Button.
-			$(
+			/*$(
 				'<div id="navButton">' +
 					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
-				.appendTo($body);
+				.appendTo($body);*/
 
 		// Panel.
-			$(
+			/*$(
 				'<div id="navPanel">' +
 					'<nav>' +
 						$('#nav').navList() +
@@ -78,7 +61,7 @@ function slick_helper(element) {
 					side: 'left',
 					target: $body,
 					visibleClass: 'navPanel-visible'
-				});
+				});*/
 
 	// Header.
 	// If the header is using "alt" styling and #banner is present, use scrollwatch

@@ -69,15 +69,15 @@ export const useAnimalsStore = defineStore('animals', {
                 Object.assign(params, {type: query.type})
             }
 
-            console.log(`ApiToken before: `, tokenStore().getApiToken)
+            /*console.log(`ApiToken before: `, tokenStore().getApiToken)*/
             if (tokenStore().getApiToken === undefined) { //  || (Math.floor(Date.now()) / 1000) > this.token.expires
                 await this.accessToken()
             }
 
-            console.log(`ApiToken after: `, tokenStore().getApiToken)
+            /*console.log(`ApiToken after: `, tokenStore().getApiToken)*/
             const { $petfinder }: any = useNuxtApp();
             const response = await $petfinder.animal.search(params)
-            console.log(`response: `, response)
+            /*console.log(`response: `, response)*/
             if (response.data) {
                 this.animals = response.data.animals
                 this.pagination = response.data.pagination

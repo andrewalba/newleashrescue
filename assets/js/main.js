@@ -4,18 +4,6 @@
 	License: pixelarity.com/license
 */
 
-/*function slick_helper(element) {
-	$_this = $(element);
-	$_this.slick({
-		dots: true,
-		infinite: true,
-		slidesToShow: 1,
-		autoplay: false,
-  		adaptiveHeight: true,
-  		//appendDots: $('.slider-nav')
-  	});
-}*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -53,15 +41,15 @@
 	// Nav Panel.
 
 		// Button.
-			$(
+			/*$(
 				'<div id="navButton">' +
 					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
-				.appendTo($body);
+				.appendTo($body);*/
 
 		// Panel.
-			$(
+			/*$(
 				'<div id="navPanel">' +
 					'<nav>' +
 						$('#nav').navList() +
@@ -78,7 +66,7 @@
 					side: 'left',
 					target: $body,
 					visibleClass: 'navPanel-visible'
-				});
+				});*/
 
 	// Header.
 	// If the header is using "alt" styling and #banner is present, use scrollwatch

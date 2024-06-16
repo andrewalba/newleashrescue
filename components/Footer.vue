@@ -10,6 +10,16 @@ export default {
     document.body.appendChild(jqueryScript)
 
     document.getElementById('jquery')?.addEventListener('load', function () {
+      const breakpoints = document.createElement('script')
+      breakpoints.setAttribute('type', 'text/javascript')
+      breakpoints.setAttribute('src', '/assets/js/breakpoints.min.js')
+      document.body.appendChild(breakpoints)
+
+      const browser = document.createElement('script')
+      browser.setAttribute('type', 'text/javascript')
+      browser.setAttribute('src', '/assets/js/browser.min.js')
+      document.body.appendChild(browser)
+
       const droptronScript = document.createElement('script')
       droptronScript.setAttribute('type', 'text/javascript')
       droptronScript.setAttribute('src', '/assets/js/jquery.dropotron.min.js')
