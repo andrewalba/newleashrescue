@@ -28,9 +28,20 @@
 		});
 
 	// Dropdowns.
-	$('#nav > ul').dropotron({
-		alignment: 'center'
-	});
+	const droptronLoaded = () => {
+		if (typeof $('#nav > ul').dropotron === "undefined") {
+			window.setTimeout( () => {
+				console.log(`wait for droptron!`);
+				droptronLoaded();
+			}, 100);
+		} else {
+			$('#nav > ul').dropotron({
+				alignment: 'center'
+			});
+		}
+	}
+
+	droptronLoaded();
 
 	// Header.
 	// If the header is using "alt" styling and #banner is present, use scrollwatch
