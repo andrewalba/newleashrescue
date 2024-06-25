@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": "22"
+    "node": "^22",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "build": "nuxt build",

@@ -31,7 +31,6 @@
 	const droptronLoaded = () => {
 		if (typeof $('#nav > ul').dropotron === "undefined") {
 			window.setTimeout( () => {
-				console.log(`wait for droptron!`);
 				droptronLoaded();
 			}, 100);
 		} else {
