@@ -25,12 +25,12 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
-
-			// Dropdowns.
-			$('#nav > ul').dropotron({
-				alignment: 'center'
-			});
 		});
+
+	// Dropdowns.
+	$('#nav > ul').dropotron({
+		alignment: 'center'
+	});
 
 	// Header.
 	// If the header is using "alt" styling and #banner is present, use scrollwatch

@@ -26,8 +26,7 @@ export default defineNuxtConfig({
     'assets/sass/main.scss'
   ],
   image: {
-    provider: 'ipx',
-    dir: 'assets/images',
+    dir: 'public/images',
     format: ['webp']
   },
   vite: {
