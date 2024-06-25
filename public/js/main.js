@@ -21,47 +21,16 @@
 			xxsmall:  [ null,      '480px'  ]
 		});
 
-	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+
+			// Dropdowns.
+			$('#nav > ul').dropotron({
+				alignment: 'center'
+			});
 		});
-
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			alignment: 'center'
-		});
-
-	// Nav Panel.
-
-		// Button.
-			/*$(
-				'<div id="navButton">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);*/
-
-		// Panel.
-			/*$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});*/
 
 	// Header.
 	// If the header is using "alt" styling and #banner is present, use scrollwatch
