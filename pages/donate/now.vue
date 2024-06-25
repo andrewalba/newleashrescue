@@ -19,7 +19,12 @@
 
         <!-- Content -->
         <section id="content" class="box">
-          <span class="image fit"><img src="/images/donate.jpg" alt="now" /></span>
+          <span class="image fit">
+            <img src="/images/donate.jpg" alt="now" />
+            <div class="align-right text-sm">
+              Photo by <a href="https://unsplash.com/@kattyukawa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Katt Yukawa</a> on <a href="https://unsplash.com/photos/person-showing-both-hands-with-make-a-change-note-and-coins-K0E6E0a0R3A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            </div>
+          </span>
           <p>Our mission is to rescue dogs and cats that are in need of a home. We rescue animals in need from impounds, owners whom surrender and many other sources where a animal is found to be without a loving home. Working with volunteers, veterinary clinics, and trainers, we strive to place healthy adoptable animals in permanent homes. We also instruct and educate our communities about the importance of spay/neutering companion animals.</p>
           <p>There are several alternative ways to help New Leash Rescue. Please click any of the options below to find out more.</p>
           <ul class="actions">

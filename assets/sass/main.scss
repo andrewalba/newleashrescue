@@ -2061,3 +2061,16 @@
 	.fa-initial {
 		vertical-align: initial;
 	}
+
+	.text-sm {
+		font-size: 0.8em;
+		& > a {
+			vertical-align: initial;
+		}
+	}
+	.text-xs {
+		font-size: 0.5em;
+		& > a {
+			vertical-align: initial;
+		}
+	}
