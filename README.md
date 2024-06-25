@@ -73,3 +73,10 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Amplify
+
+Amplify Gen 2 collects anonymous telemetry data about general usage of the CLI. 
+Participation is optional, and you may opt-out by using `npx ampx configure telemetry disable`. 
+To learn more about telemetry, visit https://docs.amplify.aws/gen2/reference/telemetry
+
