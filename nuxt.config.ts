@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  // devtools: { enabled: true },
   runtimeConfig: {
     /*petfinderApiKey: process.env.PETFINDER_API_KEY,
     petfinderApiSecret: process.env.PETFINDER_API_SECRET,*/
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       petfinderOrgId: process.env.PETFINDER_ORGANIZATION_ID,
     }
   },
-  ssr: false,
+  ssr: true,
   modules: [
     '@pinia/nuxt',
     '@nuxt/image',
