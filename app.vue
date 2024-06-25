@@ -6,7 +6,7 @@ useHead({
   link: [
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans'
+      href: 'https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans&display=swap',
     },
     {
       rel: 'apple-touch-icon',

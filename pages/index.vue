@@ -121,21 +121,21 @@ import Email from "~/components/Email.vue";
         <div class="row">
           <div class="col-4 col-12-narrower">
             <section class="special">
-              <NuxtLink to="#" class="image fit"><NuxtImg src="ftw/rizzo.jpg" alt="Rizzo" /></NuxtLink>
+              <div class="image fit"><NuxtImg src="ftw/rizzo.jpg" alt="Rizzo" /></div>
               <h3>Rizzo</h3>
               <p>Cute baby Rizzo is now Esther and went from being left alone at an impound to a brand-new loving family to call her own fur-ever!</p>
             </section>
           </div>
           <div class="col-4 col-12-narrower">
             <section class="special">
-              <NuxtLink to="#" class="image fit"><NuxtImg src="ftw/max.jpg" alt="Max" /></NuxtLink>
+              <div class="image fit"><NuxtImg src="ftw/max.jpg" alt="Max" /></div>
               <h3>Max</h3>
               <p>Sweet little Max came from a southern rescue where they have more pups than then can find families. After bringing him up to New Leash Rescue, he found his new family and is living happily fur-ever after!</p>
             </section>
           </div>
           <div class="col-4 col-12-narrower">
             <section class="special">
-              <NuxtLink to="#" class="image fit"><NuxtImg src="ftw/teddy.jpg" alt="Teddy" /></NuxtLink>
+              <div class="image fit"><NuxtImg src="ftw/teddy.jpg" alt="Teddy" /></div>
               <h3>Teddy</h3>
               <p>Teddy was part of an out of control breeding operation in Missouri. New Leash Rescue took him in, gave him care, and he now has a posh new home and family in Minnesota that loves him like he deserves!</p>
             </section>

@@ -23,9 +23,10 @@ export default defineNuxtConfig({
     '~/plugins/petfinder.ts'
   ],
   css: [
-    '@/assets/sass/main.scss'
+    'assets/sass/main.scss'
   ],
   image: {
+    provider: 'ipx',
     dir: 'assets/images',
     format: ['webp']
   },
