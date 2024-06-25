@@ -16,7 +16,6 @@ export default defineNuxtConfig({
   ssr: false,
   modules: [
     '@pinia/nuxt',
-    '@nuxt/image',
     'vue3-carousel-nuxt'
   ],
   plugins: [
@@ -25,10 +24,6 @@ export default defineNuxtConfig({
   css: [
     'assets/sass/main.scss'
   ],
-  image: {
-    dir: 'public/images',
-    format: ['webp']
-  },
   vite: {
     build: {
       minify: 'esbuild',

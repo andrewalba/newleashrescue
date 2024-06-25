@@ -14,7 +14,7 @@
         <div class="row gtr-uniform">
           <div class="col-6 col-12-narrower">
             <section class="box special">
-              <span class="image fit"><NuxtImg src="/sponsors/petsmart-logo.png" alt="Petsmart"/></span>
+              <span class="image fit"><img src="/images/sponsors/petsmart-logo.png" alt="Petsmart"/></span>
               <h3>PetSmart</h3>
               <address>
                 16001 Elmhurst Ln<br/>
@@ -32,7 +32,7 @@
           </div>
           <div class="col-6 col-12-narrower">
             <section class="box special">
-              <span class="image"><NuxtImg src="/sponsors/camp-bow-wow-logo.png" alt="Camp Bow Wow"/></span>
+              <span class="image"><img src="/images/sponsors/camp-bow-wow-logo.png" alt="Camp Bow Wow"/></span>
               <h3>Camp Bow Wow</h3>
               <address>
                 14305 Ewing Avenue S<br/>
@@ -62,7 +62,7 @@
         <div class="row gtr-uniform">
           <div class="col-12 col-12-narrower">
             <section id="content" class="box">
-              <span class="image"><NuxtImg src="/SkadronLogo.png" alt="Skadron Animal Hospital" /></span>
+              <span class="image"><img src="/images/SkadronLogo.png" alt="Skadron Animal Hospital" /></span>
               <h3>Skadron Animal Hospital</h3>
               <address>
                 178 E. Marie Avenue<br/>

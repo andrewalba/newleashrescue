@@ -13,13 +13,13 @@
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="VVED4Z8PFZFLC">
             <button name="submit" title="PayPal - The safer, easier way to pay online!" class="button donate special big"><i class="fab fa-paypal"></i> Paypal Donate</button>
-            <NuxtImg alt="PayPal" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" style="border:none; width:1px; height:1px" />
+            <img alt="PayPal" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" style="border:none; width:1px; height:1px" />
           </form>
         </header>
 
         <!-- Content -->
         <section id="content" class="box">
-          <span class="image fit"><NuxtImg src="/donate.jpg" alt="now" /></span>
+          <span class="image fit"><img src="/images/donate.jpg" alt="now" /></span>
           <p>Our mission is to rescue dogs and cats that are in need of a home. We rescue animals in need from impounds, owners whom surrender and many other sources where a animal is found to be without a loving home. Working with volunteers, veterinary clinics, and trainers, we strive to place healthy adoptable animals in permanent homes. We also instruct and educate our communities about the importance of spay/neutering companion animals.</p>
           <p>There are several alternative ways to help New Leash Rescue. Please click any of the options below to find out more.</p>
           <ul class="actions">

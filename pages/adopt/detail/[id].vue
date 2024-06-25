@@ -31,7 +31,7 @@ const petfinderOrgId = useRuntimeConfig().public.petfinderOrgId
             <Carousel>
               <Slide v-for="(photo, idx) in animal.photos" :key="idx">
                 <div class="carousel__item">
-                  <NuxtImg :src="photo.medium" :alt="animal.name" />
+                  <img :src="photo.medium" :alt="animal.name" />
                 </div>
               </Slide>
               <template #addons>

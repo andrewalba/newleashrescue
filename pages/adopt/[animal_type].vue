@@ -70,7 +70,7 @@ function getBreeds(animal: Animal) {
             </td>
             <td class="text-center px-0">
               <NuxtLink :to="'/adopt/detail/' + animal.id">
-                <NuxtImg :src="primary_photo(animal)"
+                <img :src="primary_photo(animal)"
                          :alt="animal.name"
                          height="120"/>
               </NuxtLink>
