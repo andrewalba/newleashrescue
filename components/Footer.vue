@@ -12,32 +12,32 @@ export default {
     document.getElementById('jquery')?.addEventListener('load', function () {
       const breakpoints = document.createElement('script')
       breakpoints.setAttribute('type', 'text/javascript')
-      breakpoints.setAttribute('src', '/assets/js/breakpoints.min.js')
+      breakpoints.setAttribute('src', '/js/breakpoints.min.js')
       document.body.appendChild(breakpoints)
 
       const browser = document.createElement('script')
       browser.setAttribute('type', 'text/javascript')
-      browser.setAttribute('src', '/assets/js/browser.min.js')
+      browser.setAttribute('src', '/js/browser.min.js')
       document.body.appendChild(browser)
 
       const droptronScript = document.createElement('script')
       droptronScript.setAttribute('type', 'text/javascript')
-      droptronScript.setAttribute('src', '/assets/js/jquery.dropotron.min.js')
+      droptronScript.setAttribute('src', '/js/jquery.dropotron.min.js')
       document.body.appendChild(droptronScript)
 
       const scrollexScript = document.createElement('script')
       scrollexScript.setAttribute('type', 'text/javascript')
-      scrollexScript.setAttribute('src', '/assets/js/jquery.scrollex.min.js')
+      scrollexScript.setAttribute('src', '/js/jquery.scrollex.min.js')
       document.body.appendChild(scrollexScript)
 
       const utilScript = document.createElement('script')
       utilScript.setAttribute('type', 'text/javascript')
-      utilScript.setAttribute('src', '/assets/js/util.js')
+      utilScript.setAttribute('src', '/js/util.js')
       document.body.appendChild(utilScript)
 
       const mainScript = document.createElement('script')
       mainScript.setAttribute('type', 'text/javascript')
-      mainScript.setAttribute('src', '/assets/js/main.js')
+      mainScript.setAttribute('src', '/js/main.js')
       document.body.appendChild(mainScript)
     });
   }
