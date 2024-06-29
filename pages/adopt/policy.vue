@@ -19,7 +19,7 @@
           <p>We do adopt to those in rental homes if they have lived in the rental home for least 2 years and have had dogs and/or cats as an adult before. A contract or lease must be shown. We almost never adopt dogs over 40 lbs or any puppies to rental units; an exception would be for a senior large breed dog.</p>
           <h3>How can I start the process?</h3>
           <ul>
-            <li><NuxtLink to="/assets/files/NLR-Adoption-Application-20191112.docx" title="New Leash Rescue Adoption Application DOC" class="doc" download><i class="far fa-file-word"></i></NuxtLink> <!--<NuxtLink to="/assets/files/NLR-Adoption-Application.pdf" title="New Leash Rescue Adoption Application PDF" class="pdf" download><i class="fa fa-file-pdf-o"></i></NuxtLink>--> New Leash Rescue Adoption Application</li>
+            <li><NuxtLink to="/files/NLR-Adoption-Application-20191112.docx" title="New Leash Rescue Adoption Application DOC" class="doc" external><i class="far fa-file-word"></i></NuxtLink> <!--<NuxtLink to="/assets/files/NLR-Adoption-Application.pdf" title="New Leash Rescue Adoption Application PDF" class="pdf" download><i class="fa fa-file-pdf-o"></i></NuxtLink>--> New Leash Rescue Adoption Application</li>
           </ul>
         </section>
       </section>

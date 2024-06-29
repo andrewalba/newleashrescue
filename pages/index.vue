@@ -109,6 +109,41 @@ import Email from "~/components/Email.vue";
         </div>
       </section>
     </div>
+
+    <!-- Three -->
+    <div class="wrapper style3">
+      <section class="container">
+        <header class="major">
+          <h2>Canines for the win!</h2>
+          <p><em>"A fresh start."</em> <em>"A new beginning".</em> <em>"Happily ever after."</em></p>
+          <p>This is our favorite part. Sharing our triumphant success! We love to hear from the wonderful people who have adopted from New Leash Rescue and all about their new lives together. Please <Email /> your New Leash Rescue success story.</p>
+        </header>
+        <div class="row">
+          <div class="col-4 col-12-narrower">
+            <section class="special">
+              <NuxtLink to="/adopt/success" class="image fit"><img src="/images/ftw/rizzo.jpg" alt="Rizzo" /></NuxtLink>
+              <h3>Rizzo</h3>
+              <p>Cute baby Rizzo is now Esther and went from being left alone at an impound to a brand-new loving family to call her own fur-ever!</p>
+            </section>
+          </div>
+          <div class="col-4 col-12-narrower">
+            <section class="special">
+              <NuxtLink to="/adopt/success" class="image fit"><img src="/images/ftw/max.jpg" alt="Max" /></NuxtLink>
+              <h3>Max</h3>
+              <p>Sweet little Max came from a southern rescue where they have more pups than then can find families. After bringing him up to New Leash Rescue, he found his new family and is living happily fur-ever after!</p>
+            </section>
+          </div>
+          <div class="col-4 col-12-narrower">
+            <section class="special">
+              <NuxtLink to="/adopt/success" class="image fit"><img src="/images/ftw/teddy.jpg" alt="Teddy" /></NuxtLink>
+              <h3>Teddy</h3>
+              <p>Teddy was part of an out of control breeding operation in Missouri. New Leash Rescue took him in, gave him care, and he now has a posh new home and family in Minnesota that loves him like he deserves!</p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <Contact />
   </div>
 </template>

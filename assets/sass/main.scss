@@ -135,6 +135,7 @@
 		@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
 		color: _palette(accent1, bg);
 		text-decoration: none;
+		vertical-align: initial;
 
 		&:hover {
 			color: _palette(accent1, bg) !important;
@@ -392,7 +393,7 @@
 
 				&:before,
 				&:after {
-					background-image: url('../css/images/header-major-on-light.svg');
+					background-image: url('../images/header-major-on-light.svg');
 					background-repeat: no-repeat;
 					content: '';
 					display: inline-block;
@@ -1163,7 +1164,7 @@
 					> :first-child {
 						&:before,
 						&:after {
-							background-image: url('../css/images/header-major-on-dark.svg');
+							background-image: url('../images/header-major-on-dark.svg');
 						}
 					}
 				}
@@ -1443,7 +1444,7 @@
 
 	#banner {
 		background-color: #3a3347;
-		background-image: url('../css/images/banner-small.svg');
+		background-image: url('../images/banner-small.svg');
 		background-position: 75% center;
 		background-repeat: no-repeat;
 		background-size: 300px;
@@ -2064,13 +2065,7 @@
 
 	.text-sm {
 		font-size: 0.8em;
-		& > a {
-			vertical-align: initial;
-		}
 	}
 	.text-xs {
 		font-size: 0.5em;
-		& > a {
-			vertical-align: initial;
-		}
 	}

@@ -14,10 +14,7 @@ export default defineNuxtConfig({
     }
   },
   ssr: false,
-  modules: [
-    '@pinia/nuxt',
-    'vue3-carousel-nuxt'
-  ],
+  modules: ['@pinia/nuxt', 'vue3-carousel-nuxt'],
   plugins: [
     '~/plugins/petfinder.ts'
   ],
