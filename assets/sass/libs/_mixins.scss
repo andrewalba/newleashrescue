@@ -86,6 +86,17 @@
   }
 }
 
+@mixin text-variant($color) {
+  color: $color;
+
+  &[href] {
+    @include hover-focus {
+      color: $color;
+      text-decoration: none;
+    }
+  }
+}
+
 // Hover mixin and `$enable-hover-media-query` are deprecated.
 //
 // Origally added during our alphas and maintained during betas, this mixin was

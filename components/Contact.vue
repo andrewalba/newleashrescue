@@ -1,9 +1,69 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+const apiUrl = useRuntimeConfig().public.apiUrl
 
+interface formData {
+  name: string,
+  email: string,
+  message: string,
+}
+const show_overlay = ref(false);
+const show_success = ref(false);
+const show_validation = ref(false);
+const form: formData = {
+  name: "",
+  email: "",
+  message: "",
+}
+/*let form: formData = {
+  name: "",
+  email: "",
+  message: "",
+}*/
+
+const submitForm = async () => {
+  show_overlay.value = true
+  show_validation.value = false
+  // validate
+  if (!form.name.trim() || !form.email.trim()) {
+    show_validation.value = true
+    show_overlay.value = false
+    return;
+  }
+  try{
+    const response = await fetch(`${apiUrl}/contact-form`, {
+      method: "POST",
+      body: JSON.stringify(form),
+    } )
+    if (!response.ok){
+      //Do something when request fails
+      return
+    }
+    onReset()
+    show_success.value = true
+    show_overlay.value = false
+    clearSuccess()
+  } catch (e) {
+    console.log(e);
+    show_overlay.value = false
+  }
+}
+const onReset = () => {
+  // Reset our form values
+  form.name = "";
+  form.email = "";
+  form.message = "";
+}
+const clearSuccess = () => {
+  window.setTimeout( () => {
+    show_success.value = false;
+  }, 12000);
+}
 </script>
 
 <template>
   <div>
+    <div v-if="show_overlay" class="overlay"></div>
     <!-- Contact -->
     <div class="wrapper style1">
       <section class="container medium">
@@ -12,23 +72,33 @@
           <p>We share events and other gems through our social media as well. We would love if you would take some time and connect with us through one of our social channels.</p>
         </header>
         <div id="contact" class="box">
+          <div class="row" v-if="show_success">
+            <div class="col-12 align-center mb-4">
+              <strong class="text-xl text-success">Thank you for messaging us!</strong>
+            </div>
+          </div>
+          <div class="row" v-if="show_validation">
+            <div class="col-12 align-center mb-4">
+              <strong class="text-xl text-danger">Please complete the form!</strong>
+            </div>
+          </div>
           <div class="row gtr-uniform">
             <div class="col-7 col-12-narrower">
-              <form method="post" action="/contact/general">
+              <form @submit.prevent="submitContactForm">
                 <div class="row gtr-uniform gtr-50">
                   <div class="col-12">
-                    <input type="text" name="name" id="name" placeholder="Name" />
+                    <input v-model="form.name" type="text" name="name" id="name" placeholder="Name" />
                   </div>
                   <div class="col-12">
-                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <input v-model="form.email" type="email" name="email" id="email" placeholder="Email" />
                   </div>
                   <div class="col-12">
-                    <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                    <textarea v-model="form.message" name="message" id="message" placeholder="Message" rows="7"></textarea>
                   </div>
                   <div class="col-12">
                     <ul class="actions">
-                      <li><input type="submit" value="Send" /></li>
-                      <li><input type="reset" class="alt" value="Reset" /></li>
+                      <li><input @click.prevent="submitForm" type="submit" value="Send" /></li>
+                      <li><input @reset="onReset" type="reset" class="alt" value="Reset" /></li>
                     </ul>
                   </div>
                 </div>
@@ -71,5 +141,17 @@
 </template>
 
 <style scoped>
-
+.overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
 </style>

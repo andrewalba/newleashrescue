@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     /*petfinderApiKey: process.env.PETFINDER_API_KEY,
     petfinderApiSecret: process.env.PETFINDER_API_SECRET,*/
     public: {
+      apiUrl: process.env.API_URL,
       petfinderApiKey: process.env.PETFINDER_API_KEY,
       petfinderApiSecret: process.env.PETFINDER_API_SECRET,
       phone: process.env.PHONE,

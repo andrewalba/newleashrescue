@@ -1,9 +1,3 @@
-/*
-	Elevation by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
-
 (function($) {
 
 	var	$window = $(window),
@@ -48,34 +42,43 @@
 		}
 	}
 
-	droptronLoaded();
-	breakpointsLoaded();
-
 	// Header.
 	// If the header is using "alt" styling and #banner is present, use scrollwatch
 	// to revert it back to normal styling once the user scrolls past the banner.
 	// Note: This is disabled on mobile devices.
-	if (!browser.mobile
-		&& $header.hasClass('alt')
-		&& $banner.length > 0) {
+	const browserLoaded = () => {
+		if (typeof browser === 'undefined') {
+			indow.setTimeout( () => {
+				browserLoaded();
+			}, 100);
+		} else {
+			if (!browser.mobile
+				&& $header.hasClass('alt')
+				&& $banner.length > 0) {
 
-		$window.on('load', function () {
+				$window.on('load', function () {
 
-			$banner.scrollex({
-				bottom: $header.outerHeight() + 5,
-				terminate: function () {
-					$header.removeClass('alt');
-				},
-				enter: function () {
-					$header.addClass('alt');
-				},
-				leave: function () {
-					$header.removeClass('alt');
-					$header.addClass('reveal');
-				}
-			});
+					$banner.scrollex({
+						bottom: $header.outerHeight() + 5,
+						terminate: function () {
+							$header.removeClass('alt');
+						},
+						enter: function () {
+							$header.addClass('alt');
+						},
+						leave: function () {
+							$header.removeClass('alt');
+							$header.addClass('reveal');
+						}
+					});
 
-		});
+				});
+			}
+		}
 	}
+
+	droptronLoaded();
+	breakpointsLoaded();
+	browserLoaded();
 
 })(jQuery);
