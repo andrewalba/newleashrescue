@@ -48,7 +48,7 @@
 	// Note: This is disabled on mobile devices.
 	const browserLoaded = () => {
 		if (typeof browser === 'undefined') {
-			indow.setTimeout( () => {
+			window.setTimeout( () => {
 				browserLoaded();
 			}, 100);
 		} else {
