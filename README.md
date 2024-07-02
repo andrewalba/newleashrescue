@@ -2,6 +2,54 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Environment
+
+You can download and update the environmental variables from the parameter store.
+
+[development]
+
+```shell
+aws ssm get-parameter \
+--region us-east-1 \
+--name /new-leash-rescue/app/.env.development \
+--profile newleashrescue \
+--query Parameter.Value \
+--with-decryption \
+--output text > .env.development
+```
+
+```shell
+aws ssm put-parameter \
+--region us-east-1 \
+--name /new-leash-rescue/app/.env.development \
+--profile newleashrescue \
+--value file://.env.development \
+--type "SecureString" \
+--overwrite
+```
+
+[production]
+
+```shell
+aws ssm get-parameter \
+--region us-east-1 \
+--name /new-leash-rescue/app/.env.production \
+--profile ochofitnewleashrescueness \
+--query Parameter.Value \
+--with-decryption \
+--output text > .env.production
+```
+
+```shell
+aws ssm put-parameter \
+--region us-east-1 \
+--name /new-leash-rescue/app/.env.production \
+--profile newleashrescue \
+--value file://.env.production \
+--type "SecureString" \
+--overwrite
+```
+
 ## Setup
 
 Make sure to install the dependencies:
