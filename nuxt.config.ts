@@ -12,6 +12,7 @@ export default defineNuxtConfig({
       email: process.env.EMAIL,
       petfinderBaseUrl: process.env.PETFINDER_BASE_URL,
       petfinderOrgId: process.env.PETFINDER_ORGANIZATION_ID,
+      gtagId: process.env.GAG_ID,
     }
   },
   ssr: false,
