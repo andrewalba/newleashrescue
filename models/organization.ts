@@ -1,3 +1,5 @@
+import type { Address } from '~/models/types/'
+
 export interface Organization {
     id:                string;
     name:              string;
@@ -22,15 +24,6 @@ export interface OrganizationLinks {
 
 export interface Next {
     href: string;
-}
-
-export interface Address {
-    address1: string;
-    address2: string;
-    city:     string;
-    state:    string;
-    postcode: string;
-    country:  string;
 }
 
 export interface Adoption {
