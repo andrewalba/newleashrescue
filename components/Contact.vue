@@ -2,6 +2,12 @@
 import { ref } from 'vue';
 const apiUrl = useRuntimeConfig().public.apiUrl
 
+import { useSiteData } from "~/composables/useSiteData"
+import Phone from './Phone.vue'
+import Email from './Email.vue'
+
+const { site } = useSiteData()
+
 interface formData {
   name: string,
   email: string,
@@ -59,6 +65,8 @@ const clearSuccess = () => {
     show_success.value = false;
   }, 12000);
 }
+
+const accountData = ref('adopt');
 </script>
 
 <template>
@@ -84,13 +92,13 @@ const clearSuccess = () => {
           </div>
           <div class="row gtr-uniform">
             <div class="col-7 col-12-narrower">
-              <form @submit.prevent="submitContactForm">
+              <form @submit.prevent="submitForm">
                 <div class="row gtr-uniform gtr-50">
                   <div class="col-12">
-                    <input v-model="form.name" type="text" name="name" id="name" placeholder="Name" />
+                    <input v-model="form.name" type="text" name="name" id="name" placeholder="Name" autocomplete="true" />
                   </div>
                   <div class="col-12">
-                    <input v-model="form.email" type="email" name="email" id="email" placeholder="Email" />
+                    <input v-model="form.email" type="email" name="email" id="email" placeholder="Email" autocomplete="true" />
                   </div>
                   <div class="col-12">
                     <textarea v-model="form.message" name="message" id="message" placeholder="Message" rows="7"></textarea>
@@ -108,8 +116,8 @@ const clearSuccess = () => {
               <ul class="labeled-icons">
                 <li>
                   <h3 class="icon"><i class="far fa-map-marker"></i> <span class="label">Address</span></h3>
-                  New Leash Rescue<br />
-                  Farmington, MN 55024
+                  {{  site.legalName }}<br />
+                  {{ site.address.city }}, {{ site.address.state }} {{ site.address.postal_code }}
                 </li>
                 <li>
                   <h3 class="icon"><i class="far fa-phone"></i> <span class="label">Phone</span></h3>
@@ -117,20 +125,12 @@ const clearSuccess = () => {
                 </li>
                 <li>
                   <h3 class="icon"><i class="far fa-envelope"></i> <span class="label">Email</span></h3>
-                  <Email />
+                  <Email :account="accountData" />
                 </li>
-                <li>
-                  <h3 class="icon"><i class="fab fa-twitter"></i> <span class="label">Twitter</span></h3>
-                  <a href="https://twitter.com/newleashrescue">twitter.com/newleashrescue</a>
+                <li v-for="link in site.social_links">
+                  <h3 class="icon"><i :class="link.icon"></i> <span class="label">{{ link.label }}</span></h3>
+                  <a :href="link.href" title="{{ link.label }}" target="_blank">{{ link.display_title }}</a>
                 </li>
-                <li>
-                  <h3 class="icon"><i class="fab fa-facebook"></i> <span class="label">Facebook</span></h3>
-                  <a href="https://www.facebook.com/newleash2018/">facebook.com/newleash2018</a>
-                </li>
-                <!--<li>
-                  <h3 class="icon fa-linkedin"><span class="label">LinkedIn</span></h3>
-                  <a href="#">linkedin.com/untitled-tld</a>
-                </li>-->
               </ul>
             </div>
           </div>

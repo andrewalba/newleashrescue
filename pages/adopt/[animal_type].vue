@@ -2,6 +2,10 @@
 import { useAnimalsStore } from "~/stores/animals.store"
 import type { Animal } from "~/models/animal"
 import { PetfinderPagination } from "#components";
+definePageMeta({
+  layout: "default",
+});
+
 const route = useRoute()
 const router = useRouter()
 const currentRoute = router.currentRoute._rawValue

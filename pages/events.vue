@@ -1,27 +1,31 @@
 <script setup lang="ts">
-  let event_dates: Date[] = []
-  const first_saturday = new Date()
-  const saturday_day = 6
-  const currentDay = first_saturday.getDay()
-  const distance = saturday_day - currentDay
-  first_saturday.setDate(first_saturday.getDate() + distance)
-  let week_count = 0
-  while (week_count < 5) {
-    const event_date = new Date(first_saturday.getTime());
-    event_dates.push(event_date)
-    first_saturday.setDate(first_saturday.getDate() + 7)
-    week_count++
-  }
+definePageMeta({
+  layout: "default",
+});
 
-  function formatDate(date: Date): string {
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    };
-    return date.toLocaleString('en-US', options)
-  }
+let event_dates: Date[] = []
+const first_saturday = new Date()
+const saturday_day = 6
+const currentDay = first_saturday.getDay()
+const distance = saturday_day - currentDay
+first_saturday.setDate(first_saturday.getDate() + distance)
+let week_count = 0
+while (week_count < 5) {
+  const event_date = new Date(first_saturday.getTime());
+  event_dates.push(event_date)
+  first_saturday.setDate(first_saturday.getDate() + 7)
+  week_count++
+}
+
+function formatDate(date: Date): string {
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
+  return date.toLocaleString('en-US', options)
+}
 </script>
 
 <template>

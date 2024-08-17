@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
+definePageMeta({
+  layout: "default",
+});
 </script>
 
 <template>
