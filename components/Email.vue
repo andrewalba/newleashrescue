@@ -1,11 +1,20 @@
 <script setup lang="ts">
-const runtimeConfig = useRuntimeConfig()
+import { useSiteData } from "~/composables/useSiteData"
 
-const email = runtimeConfig.public.email
+const { getEmailByAccount } = useSiteData()
+const props = defineProps({
+  account: {
+    type: String,
+    default: 'adopt',
+  }
+})
+
+const adoptEmail = getEmailByAccount(props.account)
+
 </script>
 
 <template>
-  <a :href="'mailto:' + email" :title="email">email us</a>
+  <a :href="'mailto:' + adoptEmail!.account + '@' + adoptEmail!.domain" :title="adoptEmail!.display_name">email us</a>
 </template>
 
 <style scoped>

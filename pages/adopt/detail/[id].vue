@@ -7,6 +7,9 @@ import {
   Pagination,
   Navigation,
 } from "#components";
+definePageMeta({
+  layout: "default",
+});
 
 const route = useRoute()
 const animalStore = useAnimalsStore()

@@ -109,7 +109,8 @@ useHead({
     <Header />
 
     <!-- Content -->
-    <NuxtPage />
+    <slot></slot>
+<!--    <NuxtPage />-->
 
     <Footer />
   </div>

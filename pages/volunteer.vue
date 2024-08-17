@@ -2,6 +2,10 @@
 const runtimeConfig = useRuntimeConfig()
 import Phone from "~/components/Phone.vue"
 
+definePageMeta({
+  layout: "default",
+});
+
 const email = runtimeConfig.public.email
 </script>
 
@@ -24,7 +28,7 @@ const email = runtimeConfig.public.email
             <li>making phone calls</li>
             <li>taking photos and working with photo editing software</li>
             <li>website help</li>
-            <li>fund raising</li>
+            <li>fundraising</li>
             <li>special events - pet expos, state fair, county fairs, etc</li>
             <li>newsletters and mailings</li>
           </ul>

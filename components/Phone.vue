@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { useSiteData } from "~/composables/useSiteData"
 
+const { phone } = useSiteData()
 </script>
 
 <template>
-<a href="tel:6512521874" title="phone">(651) 252-1874</a>
+<a :href="'tel:' + phone.raw" title="phone">{{ phone.formatted }}</a>
 </template>
 
 <style scoped>
