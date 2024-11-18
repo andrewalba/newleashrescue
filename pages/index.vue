@@ -2,6 +2,7 @@
   import { useSiteData } from "~/composables/useSiteData"
   import { useHomeData } from "~/composables/useHomeData";
   import Contact from "~/components/Contact.vue"
+  import Banner from "~/components/Banner.vue";
 
   definePageMeta({
     layout: "default",
@@ -9,12 +10,15 @@
 
   const { site } = useSiteData()
   const { mission, why, ftw } = useHomeData()
+  const endDate = new Date(2024, 10, 22)
+
   </script>
 
   <template>
     <div>
+      <Banner v-if="new Date() < endDate" />
       <!-- Banner -->
-      <section id="banner">
+      <section v-else id="banner">
         <h2>{{  site.title }}</h2>
         <p>{{  site.tagLine }}</p>
       </section>
