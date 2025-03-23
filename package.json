@@ -17,7 +17,7 @@
   ],
   "private": true,
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=18.18.2"
   },
   "homepage": "https://github.com/andrewalba/newleashrescue#readme",
   "bugs": {
