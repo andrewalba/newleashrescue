@@ -1,22 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // devtools: { enabled: true },
+  devtools: { enabled: true },
   runtimeConfig: {
-    /*petfinderApiKey: process.env.PETFINDER_API_KEY,
-    petfinderApiSecret: process.env.PETFINDER_API_SECRET,*/
+    petfinderApiSecret: process.env.PETFINDER_API_SECRET,
     public: {
       apiUrl: process.env.API_URL,
       petfinderApiKey: process.env.PETFINDER_API_KEY,
-      petfinderApiSecret: process.env.PETFINDER_API_SECRET,
-      phone: process.env.PHONE,
-      email: process.env.EMAIL,
       petfinderBaseUrl: process.env.PETFINDER_BASE_URL,
       petfinderOrgId: process.env.PETFINDER_ORGANIZATION_ID,
       gtagId: process.env.GAG_ID,
     }
   },
   ssr: false,
-  modules: ['@pinia/nuxt', 'vue3-carousel-nuxt'],
+  modules: [
+      '@pinia/nuxt',
+    'vue3-carousel-nuxt'
+  ],
   plugins: [
     '~/plugins/petfinder.ts'
   ],

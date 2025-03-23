@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} | New Leash Rescue` : 'New Leash Rescue';
@@ -107,7 +108,6 @@ useHead({
   <div>
 
     <Header />
-
     <!-- Content -->
     <slot></slot>
 <!--    <NuxtPage />-->

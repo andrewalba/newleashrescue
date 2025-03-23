@@ -1,3 +1,4 @@
+export * from './accessToken'
 export * from './animal'
 export * from './animals'
 export * from './organizations'
