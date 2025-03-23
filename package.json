@@ -1,6 +1,40 @@
 {
-  "name": "nuxt-app",
+  "name": "new-leash-rescue-nuxt-app",
+  "version": "1.1.0",
+  "description": "A Nuxt 3/Vue 3 application for New Leash Rescue, a non-profit no-kill pet rescue, showcasing adoptable pets and supporting donations.",
+  "keywords": [
+    "nuxt3",
+    "vue3",
+    "pet-adoption",
+    "animal-rescue",
+    "no-kill-shelter",
+    "non-profit",
+    "aws-amplify",
+    "petfinder-api",
+    "carousel",
+    "pinia",
+    "vue-router"
+  ],
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "homepage": "https://github.com/andrewalba/newleashrescue#readme",
+  "bugs": {
+    "url": "https://github.com/andrewalba/newleashrescue/issues",
+    "email": "bugs@albawebstudio.com"
+  },
+  "licenses" : [
+    {
+      "type" : "MIT",
+      "url" : "https://github.com/andrewalba/newleashrescue/blob/main/LICENSE"
+    }
+  ],
+  "author": "Alba Web Studio LLC <support@albawebstudio.com> (https://albaweb.studio)",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/albawebstudio"
+  },
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -22,6 +56,10 @@
   },
   "devDependencies": {
     "sass": "^1.72.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewalba/newleashrescue.git"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
