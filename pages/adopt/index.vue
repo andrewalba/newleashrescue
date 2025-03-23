@@ -12,7 +12,7 @@ const router = useRouter()
 const currentRoute = router.currentRoute._rawValue
 
 await animalStore.hydrate(route.query)
-const animals = animalStore.getAnimals(null)
+const animals = animalStore.getAnimals()
 const pagination = animalStore.getPagination
 
 function primary_photo(animal: Animal) {

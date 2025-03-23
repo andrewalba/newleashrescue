@@ -9,20 +9,11 @@
       <ul>
         <li><a href="/"><i class="far fa-home fa-initial"></i> Home</a></li>
         <li>
-<!--          <NuxtLink to="/adopt" title="Adopt">Adopt</NuxtLink>-->
-          <NuxtLink to="https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=MN452&sort%5B0%5D=recently_added"
-                    title="Adopt"
-                    target="_blank">Adopt</NuxtLink>
+          <NuxtLink to="/adopt" title="Adopt">Adopt</NuxtLink>
           <ul>
-<!--            <li><NuxtLink to="/adopt/dog">Dogs to Adopt</NuxtLink></li>
-            <li><NuxtLink to="/adopt/cat">Cats to Adopt</NuxtLink></li>-->
+            <li><NuxtLink to="/adopt/dog">Dogs to Adopt</NuxtLink></li>
+            <li><NuxtLink to="/adopt/cat">Cats to Adopt</NuxtLink></li>
 <!--            <li><a href="/adopt/small-furry">Small Furries to Adopt</a></li>-->
-            <li><NuxtLink to="https://www.petfinder.com/search/dogs-for-adoption/?shelter_id%5B0%5D=MN452&sort%5B0%5D=recently_added"
-                          title="dogs to adopt"
-                          target="_blank">Dogs to Adopt</NuxtLink></li>
-            <li><NuxtLink to="https://www.petfinder.com/search/cats-for-adoption/?shelter_id%5B0%5D=MN452&sort%5B0%5D=recently_added"
-                          title="cats to adopt"
-                          target="_blank">Cats to Adopt</NuxtLink></li>
             <li><NuxtLink to="/adopt/policy">Adoption Policy</NuxtLink></li>
             <li><NuxtLink to="/adopt/success">Success Stories</NuxtLink></li>
           </ul>
