@@ -11,9 +11,6 @@
         <li>
           <NuxtLink to="/adopt" title="Adopt">Adopt</NuxtLink>
           <ul>
-            <li><NuxtLink to="/adopt/dog">Dogs to Adopt</NuxtLink></li>
-            <li><NuxtLink to="/adopt/cat">Cats to Adopt</NuxtLink></li>
-<!--            <li><a href="/adopt/small-furry">Small Furries to Adopt</a></li>-->
             <li><NuxtLink to="/adopt/policy">Adoption Policy</NuxtLink></li>
             <li><NuxtLink to="/adopt/success">Success Stories</NuxtLink></li>
           </ul>

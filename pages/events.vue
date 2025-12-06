@@ -2,30 +2,6 @@
 definePageMeta({
   layout: "default",
 });
-
-let event_dates: Date[] = []
-const first_saturday = new Date()
-const saturday_day = 6
-const currentDay = first_saturday.getDay()
-const distance = saturday_day - currentDay
-first_saturday.setDate(first_saturday.getDate() + distance)
-let week_count = 0
-while (week_count < 5) {
-  const event_date = new Date(first_saturday.getTime());
-  event_dates.push(event_date)
-  first_saturday.setDate(first_saturday.getDate() + 7)
-  week_count++
-}
-
-function formatDate(date: Date): string {
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  };
-  return date.toLocaleString('en-US', options)
-}
 </script>
 
 <template>
@@ -38,17 +14,15 @@ function formatDate(date: Date): string {
       </header>
 
       <section id="content" class="box">
-        <h2>Weekly PetSmart Adoption Event</h2>
-        <ul class="alt">
-          <li v-for="event in event_dates">
-            <h3>{{ formatDate(event) }}</h3>
-            <strong>Dog Adoption Event at PetSmart in Lakeville</strong>
-            <p>
-              When: {{ formatDate(event) }} from 11:00 AM to 2:00 PM<br/>
-              Address: 16001 Elmhurst Lane, Lakeville, MN 55044
-            </p>
-          </li>
-        </ul>
+        <h2>Upcoming Events</h2>
+        <p>
+          We’re excited to share that we have a variety of events coming up! While we don’t have any events scheduled on our website at the moment, you can stay updated by visiting our Facebook page.
+        </p>
+        <p>
+          <a href="https://www.facebook.com/search/events/?q=new%20leash%20rescue" target="_blank" rel="noopener noreferrer">
+            Click here to check out our Facebook Events!
+          </a>
+        </p>
       </section>
 
     </section>
