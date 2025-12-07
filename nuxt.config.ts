@@ -9,12 +9,17 @@ export default defineNuxtConfig({
     },
     ssr: false,
     modules: [
-        '@pinia/nuxt',
     ],
     plugins: [],
     css: [
         'assets/sass/main.scss'
     ],
+    nitro: {
+        preset: 'aws-amplify',
+        awsAmplify: {
+            runtime: 'nodejs22.x'
+        },
+    },
     vite: {
         build: {
             minify: 'esbuild',
