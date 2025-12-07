@@ -10,14 +10,11 @@
     "no-kill-shelter",
     "non-profit",
     "aws-amplify",
-    "petfinder-api",
-    "carousel",
-    "pinia",
     "vue-router"
   ],
   "private": true,
   "engines": {
-    "node": ">=18.18.2"
+    "node": ">=22.18.0"
   },
   "homepage": "https://github.com/andrewalba/newleashrescue#readme",
   "bugs": {
@@ -46,13 +43,9 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
-    "@petfinder/petfinder-js": "^1.0.6",
-    "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.11.1",
-    "pinia": "^2.1.7",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
-    "vue3-carousel-nuxt": "^1.1.1"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "sass": "^1.72.0"

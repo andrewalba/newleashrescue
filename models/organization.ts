@@ -19,7 +19,6 @@ export interface Organization {
 
 export interface OrganizationLinks {
     self:    Next;
-    animals: Next;
 }
 
 export interface Next {
