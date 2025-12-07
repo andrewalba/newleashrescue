@@ -14,6 +14,12 @@ export default defineNuxtConfig({
     css: [
         'assets/sass/main.scss'
     ],
+    nitro: {
+        preset: 'aws-amplify',
+        awsAmplify: {
+            runtime: 'nodejs22.x'
+        },
+    },
     vite: {
         build: {
             minify: 'esbuild',
