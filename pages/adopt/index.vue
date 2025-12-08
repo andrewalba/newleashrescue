@@ -20,7 +20,7 @@ useHead({
   <div class="wrapper style1">
     <section id="main" class="container">
       <!-- Content -->
-      <section id="content" class="box">
+      <section id="content">
         <!-- Pet List Widget - Start -->
         <pet-scroller
             s3Url="https://dbw3zep4prcju.cloudfront.net/"
