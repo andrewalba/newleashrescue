@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useSiteData } from "~/composables/useSiteData"
 import { useNavigationData } from "~/composables/useNavigationData"
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const { site } = useSiteData()
 const { donateNavigation } = useNavigationData()
