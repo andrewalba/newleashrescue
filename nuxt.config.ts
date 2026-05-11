@@ -1,35 +1,59 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    devtools: {enabled: true},
-    runtimeConfig: {
-        public: {
-            apiUrl: process.env.API_URL,
-            gtagId: process.env.GAG_ID,
+    app: {
+        head: {
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
         }
     },
-    ssr: false,
-    modules: [
-    ],
-    plugins: [],
+    compatibilityDate: '2026-03-09',
+    devtools: { enabled: true },
+
     css: [
-        'assets/sass/main.scss'
+        '@/assets/css/main.css',
     ],
-    nitro: {
-        preset: 'aws-amplify',
-        awsAmplify: {
-            runtime: 'nodejs22.x'
+    runtimeConfig: {
+        resendApiKey: process.env.RESEND_API_KEY ?? "",
+        public: {
+            resendTemplateId: process.env.RESEND_TEMPLATE_ID ?? "",
+        }
+    },
+    modules: [
+        '@nuxt/content',
+        '@nuxt/image',
+        '@nuxt/ui',
+        'nuxt-gtag',
+        'nuxt-security',
+    ],
+    gtag: {
+        id: process.env.GTAG_ID,
+    },
+    security: {
+        headers: {
+            contentSecurityPolicy: {
+                'img-src': [
+                    "'self'",
+                    "data:",
+                    "https://www.paypalobjects.com/",
+                ],
+                'script-src': [
+                    "'self'",
+                    "'unsafe-eval'",  // Required for the QR code library
+                    'https:',
+                    "'unsafe-inline'",
+                    "https://static.cloudflareinsights.com/"
+                ],
+                'script-src-attr': [
+                    "'unsafe-inline'",
+                ],
+            }
         },
     },
     vite: {
-        build: {
-            minify: 'esbuild',
-            chunkSizeWarningLimit: 1000,
-            cssCodeSplit: true,
-        },
-        server: {
-            watch: {
-                usePolling: true,
-            },
+        optimizeDeps: {
+            include: [
+                'swiper/vue',
+                'swiper/modules',
+            ]
         }
-    }
+    },
 })
