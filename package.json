@@ -36,6 +36,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "wrangler:dev": "nuxt build && wrangler pages dev dist",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

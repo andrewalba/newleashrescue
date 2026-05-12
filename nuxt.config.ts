@@ -48,6 +48,15 @@ export default defineNuxtConfig({
             }
         },
     },
+    content: {
+        database: {
+            type: 'd1',
+            bindingName: 'newleashrescue_content_db',
+        },
+    },
+    nitro: {
+        preset: 'cloudflare-pages',
+    },
     vite: {
         optimizeDeps: {
             include: [

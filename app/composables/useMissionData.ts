@@ -61,7 +61,7 @@ export function useMissionData() {
             ],
             link: {
                 title: "Learn More",
-                to: "/donate/now",
+                to: "/donate",
                 external: false,
                 icon: null,
                 displayText: "Learn More"

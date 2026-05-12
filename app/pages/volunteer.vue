@@ -48,7 +48,7 @@ const email = runtimeConfig.public.email
       <section class="container medium">
         <header class="major">
           <h3>Donate to New Leash Rescue</h3>
-          <p>If you cannot foster or volunteer, please consider making a <NuxtLink to="/donate/now" title="donate">donation to New Leash Rescue</NuxtLink>. Thank you!</p>
+          <p>If you cannot foster or volunteer, please consider making a <NuxtLink to="/donate" title="donate">donation to New Leash Rescue</NuxtLink>. Thank you!</p>
         </header>
       </section>
     </div>

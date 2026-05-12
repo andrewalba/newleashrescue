@@ -2,9 +2,6 @@
 definePageMeta({
   layout: "default",
 });
-import { useFosterData } from "~/composables/useFosterData"
-
-const { foster, featureBlocks } = useFosterData()
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import type { Img, Link } from '~/models/types'
+import type { Img } from '~/models/types'
 
 export interface Foster {
     h3:            string

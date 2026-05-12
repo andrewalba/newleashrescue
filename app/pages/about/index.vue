@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Feature from "../components/Feature.vue";
-
 definePageMeta({
   layout: "default",
 });
@@ -8,10 +6,7 @@ definePageMeta({
 
 <template>
   <div>
-    <Home/>
-    <Mission/>
-    <Feature />
-    <Testimonials />
+    <About />
   </div>
 </template>
 
