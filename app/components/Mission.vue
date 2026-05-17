@@ -8,7 +8,7 @@ const { mission } = useMissionData()
   <div class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <!-- Title -->
     <div class="max-w-4xl mx-auto text-center mb-10 lg:mb-14">
-      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-foreground font-luckiest-guy">{{ mission.h2 }}</h2>
+      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-foreground font-luckiest-guy text-primary">{{ mission.h2 }}</h2>
       <template v-for="(paragraph, index) in mission.content" :key="index">
         <p class="mt-1 text-muted-foreground-2">{{ paragraph }}</p>
       </template>
