@@ -7,7 +7,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
+  <div class="mt-24">
     <Home/>
     <Mission/>
     <Feature />

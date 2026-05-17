@@ -19,7 +19,7 @@ useHead({
 
 <template>
   <!-- Adopt-->
-  <section id="adopt">
+  <section id="adopt" class="mt-24">
     <p class="my-8 text-blue-violet dark:text-amber-gold text-center text-lg text-muted-foreground-1">Learn more about our <ULink to="/adopt/#adoption-policy" class="underline underline-offset-2 text-primary hover:text-primary-600">Adoption Policy</ULink></p>
     <!-- Pet List Widget - Start -->
     <pet-scroller

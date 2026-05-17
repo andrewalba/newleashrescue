@@ -5,8 +5,9 @@ definePageMeta({
 </script>
 
 <template>
-
-  <Events />
+  <div class="mt-24">
+    <Events />
+  </div>
 
 </template>
 

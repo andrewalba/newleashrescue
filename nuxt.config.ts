@@ -21,6 +21,12 @@ export default defineNuxtConfig({
         }]
     },
 
+    image: {
+        cloudflare: {
+            baseURL: 'https://newleashrescue.org/'
+        }
+    },
+
     runtimeConfig: {
         resendApiKey: process.env.RESEND_API_KEY ?? "",
         public: {

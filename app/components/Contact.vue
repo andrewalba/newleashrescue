@@ -133,7 +133,7 @@ const clearSuccess = () => {
             <p class="font-semibold text-lg dark:text-white">{{ contact.callLabel }}</p>
           </div>
           <p class="text-gray-500 dark:text-gray-400">{{ contact.callContent }}</p>
-          <p class="text-primary-600 dark:te  xt-primary-500 font-bold"><NuxtLink :to="'tel:' + phone.raw">{{phone.formatted}}</NuxtLink></p>
+          <p class="text-primary hover:text-primary-300 font-bold"><NuxtLink :to="'tel:' + phone.raw">{{phone.formatted}}</NuxtLink></p>
         </div>
       </div>
     </div>

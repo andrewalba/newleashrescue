@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
+  <div class="mt-24">
     <!-- Donate-->
     <div class="wrapper style1">
       <section id="main" class="container">

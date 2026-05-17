@@ -17,7 +17,7 @@ const { foster, featureBlocks } = useFosterData()
             </template>
           </div>
           <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-2 shadow-lg rounded-lg">
+            <div class="relative flex flex-col min-w-0 wrap-break-word bg-white w-full mb-2 shadow-lg rounded-lg">
               <NuxtImg :src="block.img.src" :alt="block.img.alt" class="w-full align-middle rounded-lg" />
             </div>
           </div>
