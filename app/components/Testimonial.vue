@@ -15,7 +15,7 @@ const props = defineProps<{
 <template>
   <div class="group bg-white border border-solid border-gray-300 rounded-xl px-16 w-full hover:shadow-sm">
     <div>
-      <h3 class="pt-8 pb-6 text-2xl font-luckiest-guy text-secondary">{{ testimonial.title }}</h3>
+      <h3 class="pt-8 pb-6 text-2xl font-luckiest-guy text-primary">{{ testimonial.title }}</h3>
       <p class="text-base text-gray-600 leading-6 pb-8 group-hover:text-gray-800 slide_active:text-gray-800">
         {{ testimonial.content }}
       </p>

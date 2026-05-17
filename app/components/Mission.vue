@@ -24,7 +24,7 @@ const { mission } = useMissionData()
             <NuxtImg :src="card.img.src" :alt="card.img.alt" class="w-full object-cover rounded-xl" />
           </div>
           <div class="my-6">
-            <h3 class="text-xl font-semibold text-foreground">
+            <h3 class="text-xl font-quicksand font-stretch-ultra-expanded font-bold text-foreground text-center">
               {{ card.h3 }}
             </h3>
             <template v-for="(paragraph, index) in card.content" :key="index">
@@ -34,7 +34,7 @@ const { mission } = useMissionData()
             </template>
           </div>
           <div class="mt-auto flex items-center gap-x-3">
-            <NuxtLink :to="card.link.to" class="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full bg-layer border border-layer-line text-primary shadow-2xs hover:bg-layer-hover focus:outline-hidden focus:bg-layer-focus disabled:opacity-50 disabled:pointer-events-none">
+            <NuxtLink :to="card.link.to" class="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full bg-layer border border-layer-line text-primary shadow-2xs hover:bg-layer-hover focus:outline-hidden focus:bg-layer-focus disabled:opacity-50 disabled:pointer-events-none mx-auto">
               Read more
               <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </NuxtLink>

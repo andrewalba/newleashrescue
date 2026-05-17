@@ -16,7 +16,7 @@ const { donateNavigation } = useNavigationData()
         <p class="mt-3 font-['Caveat'] text-3xl text-blue-violet dark:text-amber-gold text-foreground text-center">{{ site.tagLine }}</p>
 
         <div class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-          <UButton icon="i-material-symbols-partner-heart-rounded" :to="donateNavigation.to" class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-lg font-medium rounded-lg border border-transparent bg-primary hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none">
+          <UButton icon="i-material-symbols-partner-heart-rounded" :to="donateNavigation.to" class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-lg font-medium rounded-lg border border-transparent text-white bg-primary hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus disabled:opacity-50 disabled:pointer-events-none">
             {{ donateNavigation.displayText }} Now
           </UButton>
         </div>

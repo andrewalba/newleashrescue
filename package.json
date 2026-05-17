@@ -35,7 +35,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env.local",
     "wrangler:dev": "nuxt build && wrangler pages dev dist",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -45,22 +45,27 @@
     "@nuxt/content": "^3.13.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.7.1",
+    "@react-email/render": "^2.0.8",
     "add": "^2.0.6",
     "better-sqlite3": "^12.9.0",
+    "date-fns": "^4.1.0",
     "nuxt": "^4.4.4",
     "nuxt-gtag": "^4.1.0",
     "nuxt-security": "^2.5.1",
     "pnpm": "^11.0.9",
+    "resend": "^6.12.3",
     "swiper": "^12.1.4",
     "tailwindcss": "^4.3.0",
     "vue": "^3.5.34",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.16.6",
     "@iconify-json/material-symbols": "^1.2.71",
     "@types/node": "^25.6.2",
     "nuxt-swiper": "^2.0.1",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "wrangler": "^4.92.0"
   },
   "repository": {
     "type": "git",
@@ -72,7 +77,8 @@
       "better-sqlite3",
       "esbuild",
       "sharp",
-      "vue-demi"
+      "vue-demi",
+      "workerd"
     ]
   }
 }

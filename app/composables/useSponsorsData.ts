@@ -1,5 +1,4 @@
 import { ref } from 'vue'
-import type { Address, Link } from '~/models/types'
 import type {
     Sponsors,
     Sponsor,
@@ -11,9 +10,12 @@ export function useSponsorsData() {
     const businessHoursSkadron   = ref<BusinessHour[]> ()
     const vets = ref<Sponsor[]>([
         {
-            img_fit: null,
             img: {
                 src: "/images/SkadronLogo.png",
+                alt: "Skadron Animal Hospital"
+            },
+            img_dark: {
+                src: "/images/SkadronLogoDark.png",
                 alt: "Skadron Animal Hospital"
             },
             h3: "Skadron Animal Hospital",
@@ -36,20 +38,6 @@ export function useSponsorsData() {
                 icon: null,
                 displayText: "https://skadronanimalhospital.com/"
             },
-            business_hours: [
-                {
-                    date: "Monday - Friday",
-                    hours: "8:00 am - 6:00 pm"
-                },
-                {
-                    date: "Saturday",
-                    hours: "8:00 am - 12:00 pm"
-                },
-                {
-                    date: "Sunday",
-                    hours: "Closed"
-                }
-            ],
             content: [
                 "Skadron Animal Hospital is a full-service AAHA certified veterinary medical facility, located in West Saint Paul, MN. We see a variety of cats, dogs, birds, rabbits, rodents and reptiles. The professional and courteous staff at Skadron Animal Hospital seeks to provide the best possible medical care, surgical care and dental care for their highly-valued patients. We are committed to promoting responsible pet ownership, preventative health care and health-related educational opportunities for our clients."
             ]
@@ -62,10 +50,13 @@ export function useSponsorsData() {
 
     const sponsors = ref<Sponsor[]>([
         {
-            img_fit: "fit",
             img: {
                 src: "/images/sponsors/petsmart-logo.png",
                 alt: "Petsmart"
+            },
+            img_dark: {
+                src: "/images/sponsors/petsmart-logo.png",
+                alt: "Petsmart Dark"
             },
             h3: "PetSmart",
             address: {
@@ -92,10 +83,13 @@ export function useSponsorsData() {
             ]
         },
         {
-            img_fit: null,
             img: {
                 src: "/images/sponsors/camp-bow-wow-logo.png",
                 alt: "Camp Bow Wow"
+            },
+            img_dark: {
+                src: "/images/sponsors/camp-bow-wow-logo.png",
+                alt: "Camp Bow Wow Dark"
             },
             h3: "Camp Bow Wow",
             address: {
@@ -123,7 +117,10 @@ export function useSponsorsData() {
         }
     ])
     const sponsor = ref<Sponsors>({
-        h2: "Our Sponsors",
+        h2: "Our Lifesaving Partners",
+        content: [
+            "We believe every animal possesses an unstoppable spirit. Our sponsors provide the vital fuel that turns a rescue story into a triumphant new beginning. By aligning with us, you aren't just funding a sanctuary; you're sparking a lifetime of joy.",
+        ],
         sponsors: sponsors.value,
         veterinarians: veterinarians.value,
     })

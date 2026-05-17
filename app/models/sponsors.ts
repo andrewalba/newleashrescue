@@ -2,19 +2,19 @@ import type { Address, Img, Link, Phone } from '~/models/types'
 
 export interface Sponsors {
     h2:            string;
+    content:       string[];
     sponsors:      Sponsor[];
     veterinarians: Veterinarians;
 }
 
 export interface Sponsor {
-    img_fit:         string | null;
     img:             Img;
+    img_dark:        Img;
     h3:              string;
     address:         Address;
     phone:           Phone;
     link:            Link;
     content:         string[];
-    business_hours?: BusinessHour[];
 }
 
 export interface BusinessHour {

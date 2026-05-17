@@ -144,6 +144,13 @@ To learn more about telemetry, visit https://docs.amplify.aws/gen2/reference/tel
 
 ### Fonts
 
+* [Luckiest Guy](https://fonts.google.com/specimen/Luckiest+Guy)             |
+* [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+* [Quicksand](https://fonts.google.com/specimen/Quicksand)
+* [Montserrat](https://fonts.google.com/specimen/Montserrat)
+* [PT Sans](https://fonts.google.com/specimen/PT+Sans)
+* [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans)
+
 
 ### Images
 

@@ -11,6 +11,16 @@ export default defineNuxtConfig({
     css: [
         '@/assets/css/main.css',
     ],
+
+    icon: {
+        // Inline SVG so `fill="currentColor"` follows Tailwind text color (default `css` mode uses masks).
+        mode: 'svg',
+        customCollections: [{
+            prefix: 'custom',
+            dir: './app/assets/icons'
+        }]
+    },
+
     runtimeConfig: {
         resendApiKey: process.env.RESEND_API_KEY ?? "",
         public: {

@@ -13,8 +13,8 @@ const activeClass = "before:absolute before:bottom-0.5 before:start-0 before:w-f
     <nav class="relative max-w-7xl w-full flex flex-wrap lg:grid lg:grid-cols-12 basis-full items-center px-4 md:px-6 lg:px-8 mx-auto">
       <div class="lg:col-span-3 flex items-center">
         <!-- Logo -->
-        <ULink :to="site.url" class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80" :aria-label="site.title">
-          New Leash Rescue
+        <ULink :to="site.url" class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-hidden focus:opacity-80 font-luckiest-guy text-primary hover:text-primary-400" :aria-label="site.title">
+          {{ site.title}}
         </ULink>
         <!-- End Logo -->
 
@@ -25,7 +25,7 @@ const activeClass = "before:absolute before:bottom-0.5 before:start-0 before:w-f
 
       <!-- Button Group -->
       <div class="flex items-center gap-x-1 lg:gap-x-2 ms-auto py-1 lg:ps-6 lg:order-3 lg:col-span-3">
-        <UButton icon="i-material-symbols-partner-heart-rounded" :to="donateNavigation.to" type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-lg font-medium text-nowrap rounded-xl bg-primary border border-primary-line hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus transition disabled:opacity-50 disabled:pointer-events-none">
+        <UButton icon="i-material-symbols-partner-heart-rounded" :to="donateNavigation.to" type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-lg font-medium text-nowrap rounded-xl text-white bg-primary border border-primary-line hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus transition disabled:opacity-50 disabled:pointer-events-none">
           {{ donateNavigation.displayText }}
         </UButton>
 

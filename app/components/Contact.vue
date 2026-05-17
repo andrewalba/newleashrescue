@@ -1,157 +1,145 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-const apiUrl = useRuntimeConfig().public.apiUrl
-
+import { ref, shallowRef } from 'vue'
 import { useSiteData } from "~/composables/useSiteData"
-import Phone from './Phone.vue'
-import Email from './Email.vue'
+import { useContactData } from "~/composables/useContactData"
+import { differenceInSeconds } from "date-fns"
+import Spinner from "~/components/common/Spinner.vue"
+import ContactForm   from "~/components/common/ContactForm.vue"
+import Success from "~/components/common/Success.vue"
 
-const { site } = useSiteData()
+export interface ContactFormResponse {
+  success: boolean
+}
 
-interface formData {
+const { contact } = useContactData()
+const { site, phone, address } = useSiteData()
+
+interface FormData {
   name: string,
+  subject: string,
   email: string,
+  phone: string,
+  form_time: Date | string,
   message: string,
 }
-const show_overlay = ref(false);
-const show_success = ref(false);
-const show_validation = ref(false);
-const form: formData = {
+
+const showSpinner = shallowRef(false)
+const showSuccess = shallowRef(false)
+const showForm = computed(() => !showSuccess.value && !showSpinner.value)
+
+const getInitialFormData = (): FormData => ({
   name: "",
+  subject: "",
   email: "",
+  phone: "",
+  form_time: new Date(),
   message: "",
-}
-/*let form: formData = {
-  name: "",
-  email: "",
-  message: "",
-}*/
+})
+
+const form = ref<FormData>(getInitialFormData());
+const resetForm = () => Object.assign(form.value, getInitialFormData());
+
+const isFormValid = computed(() => {
+  return form.value.name.trim() &&
+      form.value.email.trim() &&
+      form.value.subject.trim() &&
+      form.value.message.trim();
+});
 
 const submitForm = async () => {
-  show_overlay.value = true
-  show_validation.value = false
+  showSpinner.value = true
   // validate
-  if (!form.name.trim() || !form.email.trim()) {
-    show_validation.value = true
-    show_overlay.value = false
+  if (!isFormValid) {
+    showSpinner.value = false
     return;
   }
   try{
-    const response = await fetch(`${apiUrl}/contact-form`, {
-      method: "POST",
-      body: JSON.stringify(form),
-    } )
-    if (!response.ok){
-      //Do something when request fails
-      return
+
+    const formData = form.value
+    const submissionDT = new Date()
+    const isOutsideThreshold = differenceInSeconds(submissionDT, formData.form_time) > 5
+
+    if (formData.phone === '' && isOutsideThreshold) {
+      const { phone, form_time, ...contactForm } = formData
+      const contactFormResponse = await useApi<ContactFormResponse>('/api/send', {
+        method: 'POST',
+        body: contactForm,
+      })
+
+      if (!contactFormResponse.success) {
+        throw new Error('Failed to submit form')
+      }
     }
-    onReset()
-    show_success.value = true
-    show_overlay.value = false
-    clearSuccess()
+    resetForm()
+    showSpinner.value = false
+    showSuccess.value = true
   } catch (e) {
     console.log(e);
-    show_overlay.value = false
+    showSpinner.value = false
   }
 }
-const onReset = () => {
-  // Reset our form values
-  form.name = "";
-  form.email = "";
-  form.message = "";
-}
 const clearSuccess = () => {
-  window.setTimeout( () => {
-    show_success.value = false;
-  }, 12000);
+  resetForm()
+  showSuccess.value=false
 }
-
-const accountData = ref('adopt');
 </script>
 
 <template>
-  <div>
-    <div v-if="show_overlay" class="overlay"></div>
-    <!-- Contact -->
-    <div class="wrapper style1">
-      <section class="container medium">
-        <header class="major">
-          <h2>Connect with us</h2>
-          <p>We share events and other gems through our social media as well. We would love if you would take some time and connect with us through one of our social channels.</p>
-        </header>
-        <div id="contact" class="box">
-          <div class="row" v-if="show_success">
-            <div class="col-12 align-center mb-4">
-              <strong class="text-xl text-success">Thank you for messaging us!</strong>
-            </div>
-          </div>
-          <div class="row" v-if="show_validation">
-            <div class="col-12 align-center mb-4">
-              <strong class="text-xl text-danger">Please complete the form!</strong>
-            </div>
-          </div>
-          <div class="row gtr-uniform">
-            <div class="col-7 col-12-narrower">
-              <form @submit.prevent="submitForm">
-                <div class="row gtr-uniform gtr-50">
-                  <div class="col-12">
-                    <input v-model="form.name" type="text" name="name" id="name" placeholder="Name" autocomplete="true" />
-                  </div>
-                  <div class="col-12">
-                    <input v-model="form.email" type="email" name="email" id="email" placeholder="Email" autocomplete="true" />
-                  </div>
-                  <div class="col-12">
-                    <textarea v-model="form.message" name="message" id="message" placeholder="Message" rows="7"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><input @click.prevent="submitForm" type="submit" value="Send" /></li>
-                      <li><input @reset="onReset" type="reset" class="alt" value="Reset" /></li>
-                    </ul>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="col-5 col-12-narrower">
-              <ul class="labeled-icons">
-                <li>
-                  <h3 class="icon"><i class="far fa-map-marker"></i> <span class="label">Address</span></h3>
-                  {{  site.legalName }}<br />
-                  {{ site.address.city }}, {{ site.address.state }} {{ site.address.postcode }}
-                </li>
-                <li>
-                  <h3 class="icon"><i class="far fa-phone"></i> <span class="label">Phone</span></h3>
-                  <Phone />
-                </li>
-                <li>
-                  <h3 class="icon"><i class="far fa-envelope"></i> <span class="label">Email</span></h3>
-                  <Email :account="accountData" />
-                </li>
-                <li v-for="link in site.social_links">
-                  <h3 class="icon"><i :class="link.icon"></i> <span class="label">{{ link.label }}</span></h3>
-                  <a :href="link.href" title="{{ link.label }}" target="_blank">{{ link.display_title }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+  <section id="contact-us" class="bg-white dark:bg-gray-900">
+    <div class="pt-8 px-4 mx-auto max-w-7xl sm:pt-16 lg:px-6">
+      <div class="mx-auto text-center">
+        <h2 class="font-luckiest-guy text-primary mb-4 text-4xl tracking-tight font-extrabold leading-tight">{{ contact.h2 }}</h2>
+        <template v-for="(paragraph, index) in contact.content" :key="index">
+          <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg" v-html="paragraph" />
+        </template>
+      </div>
     </div>
-  </div>
+    <div class="px-2">
+      <div class="flex flex-wrap mx-4">
+        <div class="w-full md:w-2/3 py-8 lg:py-16 px-4 mx-auto max-w-3xl space-y-4">
+          <Spinner v-if="showSpinner" />
+
+          <ContactForm
+              v-if="showForm"
+              v-model:name.trim="form.name"
+              v-model:email.trim="form.email"
+              v-model:phone.trim="form.phone"
+              v-model:subject.trim="form.subject"
+              v-model:message.trim="form.message"
+              @submit="submitForm"
+          />
+
+          <Success @updateClearSuccess="clearSuccess" v-if="showSuccess" />
+
+        </div>
+
+        <div class="w-full md:w-1/3 flex flex-col place-content-center text-center place-items-center space-y-4 p-6 rounded-lg">
+          <div class="flex flex-col items-center space-x-2">
+            <div class="flex flex-col items-center justify-center w-10 h-10 bg-blue-500 rounded-full">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <p class="font-semibold text-lg dark:text-white">{{ contact.locationLabel }}</p>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400">{{ address.address1 }} {{ address.city }}, {{ address.state }} {{ address.postcode }}</p>
+
+          <div class="flex flex-col items-center space-x-2">
+            <div class="flex flex-col items-center justify-center w-10 h-10 bg-blue-500 rounded-full">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+            </div>
+            <p class="font-semibold text-lg dark:text-white">{{ contact.callLabel }}</p>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400">{{ contact.callContent }}</p>
+          <p class="text-primary-600 dark:te  xt-primary-500 font-bold"><NuxtLink :to="'tel:' + phone.raw">{{phone.formatted}}</NuxtLink></p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.overlay {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
+
 </style>

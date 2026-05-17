@@ -25,8 +25,7 @@ const modules = [Pagination, Navigation, EffectFade];
   <section id="testimonials" class="bg-white dark:bg-gray-900 py-24 ">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mb-16">
-<!--        <span class="text-sm text-gray-600 dark:text-gray-400 font-medium text-center block mb-2 uppercase"></span>-->
-        <h2 class="text-4xl text-center font-bold text-gray-700 dark:text-gray-300">{{ testimonial.title }}</h2>
+        <h2 class="text-4xl font-montserrat mb-6 text-center font-bold text-secondary-500 dark:text-secondary-400">{{ testimonial.title }}</h2>
         <template v-for="(paragraph, idx) in testimonial.content">
           <p class="text-lg text-gray-600 dark:text-gray-400">{{ paragraph }}</p>
         </template>

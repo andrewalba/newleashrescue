@@ -23,9 +23,8 @@ export interface Email {
 
 export interface SocialLink {
     label: string;
-    display_title: string;
     icon: string;
-    href: string;
+    to: string;
 }
 
 
@@ -56,13 +55,6 @@ export function useSiteData() {
     })
 
     const links = ref<Link[]> ([
-        /*{
-            title: "Home",
-            to: "/#home",
-            external: true,
-            icon: null,
-            displayText: "Home"
-        },*/
         {
             title: "Adopt",
             to: "/adopt",
@@ -86,7 +78,7 @@ export function useSiteData() {
         },
         {
             title: "contact us",
-            to: "/contact-us",
+            to: "/contact",
             external: false,
             icon: null,
             displayText: "Contact"
@@ -126,27 +118,23 @@ export function useSiteData() {
     const social_links = ref<SocialLink[]> ([
         {
             label: "Facebook",
-            display_title: "facebook.com/newleash2018",
-            icon: "fab fa-facebook",
-            href: "https://www.facebook.com/newleash2018/"
+            icon: "i-custom-facebook",
+            to: "https://www.facebook.com/newleash2018/"
         },
         {
             label: "Instagram",
-            display_title: "instagram.com/newleashrescuemn",
-            icon: "fab fa-instagram",
-            href: "https://instagram.com/newleashrescuemn/"
+            icon: "i-custom-instagram",
+            to: "https://instagram.com/newleashrescuemn/"
         },
         {
             label: "Tiktok",
-            display_title: "tiktok.com/@newleashrescue",
-            icon: "fab fa-tiktok",
-            href: "https://www.tiktok.com/@newleashrescue"
+            icon: "i-custom-tiktok",
+            to: "https://www.tiktok.com/@newleashrescue"
         },
         {
             label: "GiveMN",
-            display_title: "givemn.org/New-Leash-Rescue",
-            icon: "far fa-hand-heart",
-            href: "https://www.givemn.org/organization/New-Leash-Rescue"
+            icon: "i-material-symbols-volunteer-activism-rounded",
+            to: "https://www.givemn.org/organization/New-Leash-Rescue"
         }
     ])
     const site = ref<Site>({

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 @import "@nuxt/ui";
 
@@ -10,9 +10,20 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Nuxt Icon local collections: Iconify sets class="iconify iconify--…" on the <svg> and drops Tailwind classes from UIcon. */
+svg.iconify[class*="iconify--custom"] {
+    color: inherit;
+}
+svg.iconify[class*="iconify--custom"] :where(path) {
+    fill: currentColor;
+}
+
 @theme {
-    --font-open-sans: 'Open Sans', sans-serif;
     --font-luckiest-guy: 'Luckiest Guy', cursive;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-pt-sans: 'PT Sans', sans-serif;
+    --font-quicksand: 'Quicksand', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
     --color-primary: var(--color-neon-pink);
     --color-primary-50: var(--color-neon-pink-50);
     --color-primary-100: var(--color-neon-pink-100);
