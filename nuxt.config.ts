@@ -53,6 +53,7 @@ export default defineNuxtConfig({
                     "'self'",
                     "data:",
                     "https://www.paypalobjects.com/",
+                    "https://*.cloudfront.net/"
                 ],
                 'script-src': [
                     "'self'",
