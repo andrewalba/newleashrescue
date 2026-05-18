@@ -11,11 +11,11 @@ export function useSponsorsData() {
     const vets = ref<Sponsor[]>([
         {
             img: {
-                src: "/images/sposnsors/SkadronLogo.png",
+                src: "/images/sponsors/SkadronLogo.png",
                 alt: "Skadron Animal Hospital"
             },
             img_dark: {
-                src: "/images/sposnsors/SkadronLogoDark.png",
+                src: "/images/sponsors/SkadronLogoDark.png",
                 alt: "Skadron Animal Hospital"
             },
             h3: "Skadron Animal Hospital",

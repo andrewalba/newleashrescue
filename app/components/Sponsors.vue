@@ -37,7 +37,7 @@ const { sponsor } = useSponsorsData()
     <div class="grid md:grid-cols-2 items-center gap-12">
       <template v-for="(vet, idx) in sponsor.veterinarians.vets" :key="idx">
         <div>
-          <h1 class="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl lg:leading-tight">{{ vet.h3 }}</h1>
+          <h1 class="font-luckiest-guy text-secondary text-2xl font-bold text-foreground sm:text-3xl lg:leading-tight">{{ vet.h3 }}</h1>
 
           <address class="font-semibold text-sm text-foreground">
             {{ vet.address.address1 }}<br/>
