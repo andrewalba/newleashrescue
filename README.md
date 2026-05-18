@@ -193,8 +193,11 @@ Photo by [Jahanzeb Ahsan](https://unsplash.com/@jahan_photobox?
 utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/rows-of-lit-candles-in-a-dark-room-S7AAHM10FjA?
 utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Photo by <a href="https://unsplash.com/@krista?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Krista Mangulsone</a> on <a href="https://unsplash.com/photos/white-dog-and-gray-cat-hugging-each-other-on-grass-9gz3wfHr65U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by [Krista Mangulsone](https://unsplash.com/@krista?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/white-dog-and-gray-cat-hugging-each-other-on-grass-9gz3wfHr65U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Photo by <a href="https://unsplash.com/@lisoglazka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tatyana Rubleva</a> on <a href="https://unsplash.com/photos/a-tabby-cat-sits-on-a-fluffy-white-blanket--t_TdwRZjSs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by [Tatyana Rubleva](https://unsplash.com/@lisoglazka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-tabby-cat-sits-on-a-fluffy-white-blanket--t_TdwRZjSs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Photo by <a href="https://unsplash.com/@jeffreyflin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeffrey F Lin</a> on <a href="https://unsplash.com/photos/man-smiling-while-holding-black-american-pit-bull-terrier-puppy-qva6hTvk0D0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by [Jeffrey F Lin](https://unsplash.com/@jeffreyflin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/man-smiling-while-holding-black-american-pit-bull-terrier-puppy-qva6hTvk0D0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Anoir Chafik](https://unsplash.com/@anoirchafik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/selective-focus-photography-of-three-brown-puppies-2_3c4dIFYFU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      

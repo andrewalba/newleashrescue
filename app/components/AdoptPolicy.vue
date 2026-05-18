@@ -8,7 +8,7 @@ const {adoptPolicy} = useAdoptData()
   <section id="adoption-policy">
     <!-- Features -->
     <div class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-      <div class="aspect-[16/7]">
+      <div class="aspect-16/7">
         <NuxtImg :src="adoptPolicy.img.src" :alt="adoptPolicy.img.alt" class="size-full object-cover rounded-xl"/>
       </div>
 

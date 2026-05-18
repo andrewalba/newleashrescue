@@ -52,7 +52,7 @@ export function useAdoptData() {
             'Finding the right rhythm between a resilient animal and a new family is our favorite kind of magic. We’ve designed our adoption process to ensure every transition is a smooth, joyful success for both ends of the leash. These guidelines help us honor the unique spirit of every dog and cat in our care.',
         ],
         img: {
-            src: '/images/dog-policy.jpg',
+            src: '/images/adopt-policy-unsplash.jpg',
             alt: 'Adopt Policy',
         },
         featureBlocks: featureBlocks.value
