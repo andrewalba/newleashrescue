@@ -29,7 +29,7 @@ export function useAboutData() {
         {
             "h3": "Essential Supplies for Spunky Spirits",
             "content": [
-                "We always welcome high-quality food, sturdy leashes, and soft bedding to keep our sanctuary comfortable. PetSmart gift cards also help us customize care for animals with unique needs or extra-large personalities. Every collar or soft blanket helps a companion feel like they <strong>truly belong</strong>."
+                "We always welcome high-quality food, sturdy leashes, and soft bedding to keep our rescues comfortable. PetSmart gift cards also help us customize care for animals with unique needs or extra-large personalities. Every collar or soft blanket helps a companion feel like they <strong>truly belong</strong>."
             ],
             img: {
                 "src": "/images/cat-blanket-unsplash.jpg",

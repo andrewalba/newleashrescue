@@ -119,7 +119,7 @@ export function useSponsorsData() {
     const sponsor = ref<Sponsors>({
         h2: "Our Lifesaving Partners",
         content: [
-            "We believe every animal possesses an unstoppable spirit. Our sponsors provide the vital fuel that turns a rescue story into a triumphant new beginning. By aligning with us, you aren't just funding a sanctuary; you're sparking a lifetime of joy.",
+            "We believe every animal possesses an unstoppable spirit. Our sponsors provide the vital fuel that turns a rescue story into a triumphant new beginning. By aligning with us, you aren't just funding a rescue organization; you're sparking a lifetime of joy.",
         ],
         sponsors: sponsors.value,
         veterinarians: veterinarians.value,

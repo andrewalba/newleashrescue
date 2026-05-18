@@ -18,7 +18,7 @@ export function useEventData() {
         {
             h3: "Encounters Await You",
             content: [
-                "Adoption days bring the magic of our sanctuary straight to the neighborhood. You will feel an instant heart-connection when you look into the eyes of an animal waiting for their match. Come meet these brave souls, hear their happy stories, and find the perfect companion for your lifestyle."
+                "Adoption days bring the magic of our rescue organization straight to the neighborhood. You will feel an instant heart-connection when you look into the eyes of an animal waiting for their match. Come meet these brave souls, hear their happy stories, and find the perfect companion for your lifestyle."
             ],
             cta: {
                 to: "/adopt",
@@ -58,7 +58,7 @@ export function useEventData() {
     const event = ref<Event>({
         "h2": "Hearts Coming Together",
         "content": [
-            "We build beautiful futures through celebration and community connection. Our lively gatherings bring passionate people and resilient animals together to spark lifelong bonds. Check out our upcoming calendar to see where you can meet your new best friend or support our sanctuary.",
+            "We build beautiful futures through celebration and community connection. Our lively gatherings bring passionate people and resilient animals together to spark lifelong bonds. Check out our upcoming calendar to see where you can meet your new best friend or support our animal rescue.",
         ],
         eventBlocks: eventBlocks.value
     })

@@ -19,7 +19,7 @@ export function useFosterData() {
         {
             "h3": "Unstoppable Hearts Fuel Our Mission",
             "content": [
-                "Foster partners and volunteers form the vibrant heartbeat of New Leash Rescue. Because we operate without a paid staff, every dollar you donate goes directly toward the nourishment and healing of the animals in our sanctuary. You aren't just joining a team; you're becoming a vital anchor for a soul in transition."
+                "Foster partners and volunteers form the vibrant heartbeat of New Leash Rescue. Because we operate without a paid staff, every dollar you donate goes directly toward the nourishment and healing of the animals in our rescue. You aren't just joining a team; you're becoming a vital anchor for a soul in transition."
             ],
             "img": {
                 "src": "/images/foster-cat-and-dogs-unsplash.jpg",
@@ -60,7 +60,7 @@ export function useFosterData() {
     const foster = ref<Foster>({
         "h3": "Unstoppable Hearts Fuel Our Mission",
         "content": [
-            "Foster partners and volunteers form the vibrant heartbeat of New Leash Rescue. Because we operate without a paid staff, every dollar you donate goes directly toward the nourishment and healing of the animals in our sanctuary. You aren't just joining a team; you're becoming a vital anchor for a soul in transition."
+            "Foster partners and volunteers form the vibrant heartbeat of New Leash Rescue. Because we operate without a paid staff, every dollar you donate goes directly toward the nourishment and healing of the animals in our care. You aren't just joining a team; you're becoming a vital anchor for a soul in transition."
         ],
         "img": {
             "src": "",

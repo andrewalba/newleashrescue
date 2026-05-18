@@ -21,7 +21,7 @@ export function useDonateData() {
         {
             "h2": "Fuel the Journey: Your Impact in Action",
             "content": [
-                "Donations are the vibrant lifeblood of our mission. At New Leash Rescue, we operate with 100% volunteer energy, ensuring every gift you share goes directly to the nourishment, medical care, and specialized rehabilitation of the animals in our sanctuary. Your generosity turns a moment of need into a lifetime of resilience."
+                "Donations are the vibrant lifeblood of our mission. At New Leash Rescue, we operate with 100% volunteer energy, ensuring every gift you share goes directly to the nourishment, medical care, and specialized rehabilitation of the animals in our foster care. Your generosity turns a moment of need into a lifetime of resilience."
             ],
         }
     )

@@ -20,7 +20,7 @@ export function useFeatureData() {
         {
             h3: "Radiant Rescues, Bold New Chapters",
             content: [
-                "We team up with local partners to turn \"desperate\" into \"dreaming big.\" The moment a dog or cat enters our sanctuary, they aren't just a number—they're a cherished guest finding their footing. You can see the light return to their eyes the second they realize they’re safe."
+                "We team up with local partners to turn \"desperate\" into \"dreaming big.\" The moment a dog or cat enters our rescue organization, they aren't just a number—they're a cherished guest finding their footing. You can see the light return to their eyes the second they realize they’re safe."
             ],
             icon: "i-material-symbols-approval-delegation-rounded",
             link: {
