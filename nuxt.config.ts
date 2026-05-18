@@ -40,9 +40,11 @@ export default defineNuxtConfig({
         'nuxt-gtag',
         'nuxt-security',
     ],
+
     gtag: {
         id: process.env.GTAG_ID,
     },
+
     security: {
         headers: {
             contentSecurityPolicy: {
@@ -61,6 +63,11 @@ export default defineNuxtConfig({
                 'script-src-attr': [
                     "'unsafe-inline'",
                 ],
+                'form-action': [
+                    "'self'",  // Allow form submissions to the same origin
+                    "https://www.paypal.com"  // Allow form submissions to PayPal
+                ],
+
             }
         },
     },
