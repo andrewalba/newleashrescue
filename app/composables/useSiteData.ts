@@ -29,6 +29,8 @@ export interface SocialLink {
 
 
 export function useSiteData() {
+    const { public: { siteUrl } } = useRuntimeConfig()
+
     const address = ref<Address> ({
         address1: "",
         address2: null,
@@ -142,7 +144,7 @@ export function useSiteData() {
         legalName: "New Leash Rescue",
         tagLine: "giving dogs a new leash on life",
         created: new Date(2016, 7, 1),
-        url: "https://newleashrescue.org",
+        url: siteUrl,
         address: address.value,
         phone: phone.value,
         emails: emails.value,

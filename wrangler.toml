@@ -7,6 +7,14 @@ pages_build_output_dir = "dist"
 # GOOGLE TAG
 GA_ID = "G-Z2SQX5PD13"
 
+[env.preview.vars]
+NUXT_PUBLIC_SITE_URL = "https://feature-cloudflare-migration.newleashrescue.pages.dev"
+GA_ID = ""  # or a separate preview GA property
+
+[env.production.vars]
+NUXT_PUBLIC_SITE_URL = "https://newleashrescue.org"
+GA_ID = "G-Z2SQX5PD13"
+
 [[d1_databases]]
 binding = "newleashrescue_content_db"
 database_name = "newleashrescue-content-db"

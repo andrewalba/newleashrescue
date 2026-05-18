@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         resendApiKey: process.env.RESEND_API_KEY ?? "",
         public: {
+            siteUrl: process.env.SITE_URL || 'https://newleashrescue.org',
             resendTemplateId: process.env.RESEND_TEMPLATE_ID ?? "",
         }
     },
