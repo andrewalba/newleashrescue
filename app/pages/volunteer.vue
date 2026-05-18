@@ -21,7 +21,6 @@ const email = runtimeConfig.public.email
 
         <!-- Content -->
         <section id="content" class="box">
-          <span class="image fit"><img src="/images/volunteer.jpg" alt="volunteer" /></span>
           <p>Some of the things we can always use help with are: </p>
           <ul>
             <li>assisting with adoption days (must be at least 18 years old)</li>
