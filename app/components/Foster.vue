@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { useFosterData } from "~/composables/useFosterData"
+import FosterApplication from "~/components/common/FosterApplication.vue";
 const { foster, featureBlocks } = useFosterData()
 </script>
 
 <template>
   <section id="foster">
     <div class="container mx-auto px-4">
+      <div class="my-8 md:my-12 flex w-full justify-center">
+        <FosterApplication />
+      </div>
       <template v-for="(block, index) in featureBlocks" :key="index">
         <div :class="['flex flex-wrap items-center mt-16', index % 2 !== 0 ? 'flex-row-reverse' : '']">
           <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
@@ -23,6 +27,9 @@ const { foster, featureBlocks } = useFosterData()
           </div>
         </div>
       </template>
+      <div class="my-8 md:my-12 flex w-full justify-center">
+        <FosterApplication />
+      </div>
     </div>
   </section>
 </template>

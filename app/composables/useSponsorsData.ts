@@ -58,23 +58,89 @@ export function useSponsorsData() {
                 src: "/images/sponsors/petsmart-logo.png",
                 alt: "Petsmart Dark"
             },
-            h3: "PetSmart",
+            h3: "PetSmart -Burnsville",
             address: {
-                address1: "16001 Elmhurst Ln",
+                address1: "14150 Nicollet Ave Suite 2",
                 address2: null,
-                city: "Lakeville",
+                city: "Burnsville",
                 state: "MN",
-                postcode: "55044",
+                postcode: "55337",
                 country: null
             },
             phone: {
-                raw: "+16517029779",
-                formatted: "(651) 702-9779"
+                raw: "+19522460119",
+                formatted: "(952) 246-0119"
             },
             link: {
-                to: "https://www.petsmart.com/stores/us/mn/lakeville-store2733.html",
+                to: "https://www.petsmart.com/stores/us/mn/burnsville-store3283.html",
                 external: true,
-                title: "PetSmart",
+                title: "PetSmart - Burnsville",
+                icon: null,
+                displayText: "https://www.petsmart.com/"
+            },
+            content: [
+                "Get the best pet supplies online and in store! PetSmart offers quality products and accessories for a healthier, happier pet. Buy any bag of food at PetSmart and we donate a meal to shelter pets!"
+            ]
+        },
+        {
+            img: {
+                src: "/images/sponsors/petsmart-logo.png",
+                alt: "Petsmart"
+            },
+            img_dark: {
+                src: "/images/sponsors/petsmart-logo.png",
+                alt: "Petsmart Dark"
+            },
+            h3: "PetSmart - Cottage Grove",
+            address: {
+                address1: "7240 E Point Douglas Rd. S Suite 190",
+                address2: null,
+                city: "Cottage Grove",
+                state: "MN",
+                postcode: "55016",
+                country: null
+            },
+            phone: {
+                raw: "+16513551822",
+                formatted: "(651) 355-1822"
+            },
+            link: {
+                to: "https://www.petsmart.com/stores/us/mn/cottage-grove-store3221.html",
+                external: true,
+                title: "PetSmart - Cottage Grove",
+                icon: null,
+                displayText: "https://www.petsmart.com/"
+            },
+            content: [
+                "Get the best pet supplies online and in store! PetSmart offers quality products and accessories for a healthier, happier pet. Buy any bag of food at PetSmart and we donate a meal to shelter pets!"
+            ]
+        },
+        {
+            img: {
+                src: "/images/sponsors/petsmart-logo.png",
+                alt: "Petsmart"
+            },
+            img_dark: {
+                src: "/images/sponsors/petsmart-logo.png",
+                alt: "Petsmart Dark"
+            },
+            h3: "PetSmart - Maplewood",
+            address: {
+                address1: "2370 White Bear Ave N",
+                address2: null,
+                city: "Maplewood",
+                state: "MN",
+                postcode: "55109",
+                country: null
+            },
+            phone: {
+                raw: "+16517779533",
+                formatted: "(651) 777-9533"
+            },
+            link: {
+                to: "https://www.petsmart.com/stores/us/mn/maplewood-store0461.html",
+                external: true,
+                title: "PetSmart - Maplewood",
                 icon: null,
                 displayText: "https://www.petsmart.com/"
             },

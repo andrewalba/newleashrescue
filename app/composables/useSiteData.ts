@@ -32,11 +32,11 @@ export function useSiteData() {
     const { public: { siteUrl } } = useRuntimeConfig()
 
     const address = ref<Address> ({
-        address1: "",
+        address1: "PO Box 486",
         address2: null,
-        city: "Farmington",
+        city: "Lindstrom",
         state: "MN",
-        postcode: "55024",
+        postcode: "55045",
         country: null
     });
     const emails = ref<Email[]> ([
@@ -142,7 +142,7 @@ export function useSiteData() {
     const site = ref<Site>({
         title: "New Leash Rescue",
         legalName: "New Leash Rescue",
-        tagLine: "giving dogs a new leash on life",
+        tagLine: "giving dogs and cats a new leash on life",
         created: new Date(2016, 7, 1),
         url: siteUrl,
         address: address.value,

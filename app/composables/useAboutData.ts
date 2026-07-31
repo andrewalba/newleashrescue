@@ -51,6 +51,7 @@ export function useAboutData() {
     const about = ref<About>({
         "h2": "Fueling Unstoppable New Beginnings",
         "content": [
+            "New Leash Rescue was created in 2018 to help dogs and cats in need of a loving home. We are a completely volunteer-run 501c3 non-profit organization dedicated to helping animals in need of a second chance and a new leash on life.",
             "Your support serves as the heartbeat of every recovery and every joyful tail wag. We believe every animal possesses a <strong>radiant spirit</strong> just waiting for the right person to notice it. When you give, you provide the bridge between a difficult past and a vibrant, love-filled future.",
         ],
         "cards": aboutCards.value

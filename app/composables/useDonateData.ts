@@ -1,5 +1,4 @@
 import { ref } from 'vue'
-import { useSiteData } from "~/composables/useSiteData";
 import type { Img, Link } from "~/models/types";
 
 export interface DonateNow {
@@ -13,8 +12,6 @@ export interface DonateOption {
     img:           Img,
     cta:           Link | null
 }
-
-const { site } = useSiteData()
 
 export function useDonateData() {
     const donateNow = ref<DonateNow>(
@@ -35,7 +32,7 @@ export function useDonateData() {
                 "src": "/images/donate-unsplash.jpg",
                 "alt": "Radiant Gifts for Immediate Healing"
             },
-            cta: null // **Donate Now to Change a Life**
+            "cta": null // **Donate Now to Change a Life**
         },
         {
             "h2": "Spunky Supplies and Sensory Surprises",
@@ -46,7 +43,7 @@ export function useDonateData() {
                 "src": "/images/dog-with-flowers-unsplash.jpg",
                 "alt": "Spunky Supplies and Sensory Surprise"
             },
-            cta: null // **Be a Hero—Shop Our Wishlist**
+            "cta": null // **Be a Hero—Shop Our Wishlist**
         },
         {
             "h2": "Unstoppable Energy Through Local Partnerships",
@@ -57,7 +54,13 @@ export function useDonateData() {
                 "src": "/images/partnerships-unsplash.jpg",
                 "alt": "Unstoppable Energy Through Local Partnerships"
             },
-            cta: null // **Start Your Fundraising Adventure**
+            "cta": {
+                "to": "mailto:newleashrescue2018@gmail.com",
+                "external": false,
+                "title": "Start Your Fundraising Adventure",
+                "icon": "i-material-symbols-volunteer-activism-rounded",
+                "displayText": "Start Your Fundraising Adventure",
+            }
         },
         {
             "h2": "Everlasting Tributes for Cherished Bonds",
@@ -68,7 +71,13 @@ export function useDonateData() {
                 "src": "/images/candle-memorial-unsplash.jpg",
                 "alt": "Everlasting Tributes for Cherished Bonds"
             },
-            cta: null // **Give a Gift in Loving Memory**
+            "cta": {
+                "to": "mailto:newleashrescue2018@gmail.com",
+                "external": false,
+                "title": "Give a Gift in Loving Memory",
+                "icon": "i-material-symbols-volunteer-activism-rounded",
+                "displayText": "Give a Gift in Loving Memory",
+            }
         }
     ])
 

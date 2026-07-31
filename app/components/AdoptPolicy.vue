@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 import {useAdoptData} from "~/composables/useAdoptData"
 
 const {adoptPolicy} = useAdoptData()

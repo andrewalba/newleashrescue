@@ -32,7 +32,7 @@ const { sponsor } = useSponsorsData()
     </template>
   </div>
   <!-- Veterinarians -->
-  <div class="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     <!-- Grid -->
     <div class="grid md:grid-cols-2 items-center gap-12">
       <template v-for="(vet, idx) in sponsor.veterinarians.vets" :key="idx">

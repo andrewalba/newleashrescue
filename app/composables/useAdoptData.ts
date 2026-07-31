@@ -2,6 +2,10 @@ import { ref } from 'vue'
 
 import type { Img, Link } from '~/models/types'
 
+export interface Adopt {
+    content: string[]
+}
+
 export interface AdoptPolicy {
     h2:            string
     content:       string[]
@@ -16,6 +20,12 @@ export interface FeatureBlock {
 }
 
 export function useAdoptData() {
+    const adopt = ref<Adopt>({
+        content: [
+            'New Leash Rescue hold adoptions on Saturdays at various PetSmart locations around the twin cities area. There are also many other events and fundraisers that we hold each year - please follow us on Facebook to learn more.',
+            'Learn more about our <a href="#adoption-policy" class="underline underline-offset-2 text-primary hover:text-primary-600">Adoption Policy</a>'
+        ],
+    })
     const featureBlocks = ref<FeatureBlock[]>([
         {
             h3: 'Vibrant Health and Safe Spaces',
@@ -49,6 +59,7 @@ export function useAdoptData() {
     const adoptPolicy = ref<AdoptPolicy>({
         h2: 'Perfect Matches and Bold New Chapters',
         content: [
+            'All animals living in the household must be spayed or neutered and up to date on vaccinations. Pets must show good history of annual exams, vaccinations, and other care as recommended by the veterinarian. Dogs and cats are being adopted as indoor pets only. Some pets may require a fenced in yard or require placement with another dog or cat. Specific needs will be listed in each animals bio.',
             'Finding the right rhythm between a resilient animal and a new family is our favorite kind of magic. We’ve designed our adoption process to ensure every transition is a smooth, joyful success for both ends of the leash. These guidelines help us honor the unique spirit of every dog and cat in our care.',
         ],
         img: {
@@ -58,6 +69,7 @@ export function useAdoptData() {
         featureBlocks: featureBlocks.value
     })
     return {
+        adopt,
         adoptPolicy,
     }
 }
