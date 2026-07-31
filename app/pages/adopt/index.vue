@@ -2,6 +2,7 @@
 
 import AdoptionApplication from "~/components/common/AdoptionApplication.vue";
 import AdoptPolicy from "~/components/AdoptPolicy.vue";
+import PetScroller from "~/components/common/PetScroller.vue";
 import { useAdoptData } from "~/composables/useAdoptData"
 
 const { adopt } = useAdoptData()
@@ -9,16 +10,6 @@ const { adopt } = useAdoptData()
 definePageMeta({
   layout: "default",
 });
-
-useHead({
-  script: [
-    {
-      src: 'https://www.petfinder.com/pet-scroller.bundle.js',
-      // Using bodyClose ensures the script loads after the HTML is parsed, similar to placing it in the body
-      tagPosition: 'bodyClose'
-    }
-  ]
-})
 </script>
 
 <template>
@@ -33,16 +24,7 @@ useHead({
     </div>
 
     <!-- Pet List Widget - Start -->
-    <pet-scroller
-        s3Url="https://dbw3zep4prcju.cloudfront.net/"
-        apiBase="https://psl.petfinder.com/graphql"
-        organization='["ef14e030-9d27-4d78-bd47-a85a80372b56"]'
-        status="adoptable"
-        petfinderUrl="https://www.petfinder.com/"
-        hideBreed="true"
-        limit=24
-        petListTitle="">
-    </pet-scroller>
+    <PetScroller />
     <!-- Pet List Widget - End -->
   </section>
 
