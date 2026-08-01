@@ -128,3 +128,76 @@ Amplify Gen 2 collects anonymous telemetry data about general usage of the CLI.
 Participation is optional, and you may opt-out by using `npx ampx configure telemetry disable`. 
 To learn more about telemetry, visit https://docs.amplify.aws/gen2/reference/telemetry
 
+## Assets
+
+### Colors
+
+[Vibrant Color Fiesta](https://coolors.co/palette/ffbe0b-fb5607-ff006e-8338ec-3a86ff)
+
+| Color Name   | Hex Code                                                                                          |
+|--------------|---------------------------------------------------------------------------------------------------|
+| Amber Gold   | <div style="display: inline-block; width: 16px; height: 16px; background-color: #ffbe0b;"></div> #ffbe0b |
+| Blaze Orange | <div style="display: inline-block; width: 16px; height: 16px; background-color: #fb5607;"></div> #fb5607 |
+| Neon Pink    | <div style="display: inline-block; width: 16px; height: 16px; background-color: #ff006e;"></div> #ff006e |
+| Blue Violet  | <div style="display: inline-block; width: 16px; height: 16px; background-color: #8338ec;"></div> #8338ec |
+| Azure Blue   | <div style="display: inline-block; width: 16px; height: 16px; background-color: #3a86ff;"></div> #3a86ff |
+
+### Fonts
+
+* [Luckiest Guy](https://fonts.google.com/specimen/Luckiest+Guy)             |
+* [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+* [Quicksand](https://fonts.google.com/specimen/Quicksand)
+* [Montserrat](https://fonts.google.com/specimen/Montserrat)
+* [PT Sans](https://fonts.google.com/specimen/PT+Sans)
+* [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans)
+
+
+### Images
+
+Photo by [Chewy](https://unsplash.com/@chewy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on 
+[Unsplash](https://unsplash.
+com/photos/person-in-blue-denim-jeans-holding-white-and-black-short-coated-small-dog-NVIyVF2Ecp0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Chewy](https://unsplash.com/@chewy?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/black-white-and-brown-short-coated-dog-fGxiRXr2oZg?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Katt Yukawa](https://unsplash.com/@kattyukawa?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.
+com/photos/person-showing-both-hands-with-make-a-change-note-and-coins-K0E6E0a0R3A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Andrew S](https://unsplash.com/@sita2?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+on [Unsplash](https://unsplash.com/photos/a-dog-and-a-cat-laying-in-the-grass-ouo1hbizWwo?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Krista Mangulsone](https://unsplash.com/@krista?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/white-dog-and-gray-cat-hugging-each-other-on-grass-9gz3wfHr65U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Alvan Nee](https://unsplash.com/@alvannee?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.
+com/photos/two-brown-and-white-dogs-running-dirt-road-during-daytime-T-0EW-SEbsE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Noel Wangler](https://unsplash.com/@noelwangler?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-cat-with-green-eyes-4fSbPSfwEyw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Eric Ward](https://unsplash.com/@ericjamesward?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/photo-of-man-hugging-tan-dog-ISg37AI2A-s?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Jana Briede](https://unsplash.com/@jana_briede?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/white-and-brown-short-coated-dog-on-yellow-flower-field-during-daytime-0hKeD_OwgJ0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Radission US](https://unsplash.com/@radission?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.
+com/photos/two-people-shaking-hands-in-front-of-a-laptop-_XeQ8XEWb4Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Jahanzeb Ahsan](https://unsplash.com/@jahan_photobox?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/rows-of-lit-candles-in-a-dark-room-S7AAHM10FjA?
+utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Krista Mangulsone](https://unsplash.com/@krista?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/white-dog-and-gray-cat-hugging-each-other-on-grass-9gz3wfHr65U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Tatyana Rubleva](https://unsplash.com/@lisoglazka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-tabby-cat-sits-on-a-fluffy-white-blanket--t_TdwRZjSs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Jeffrey F Lin](https://unsplash.com/@jeffreyflin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/man-smiling-while-holding-black-american-pit-bull-terrier-puppy-qva6hTvk0D0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+Photo by [Anoir Chafik](https://unsplash.com/@anoirchafik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/selective-focus-photography-of-three-brown-puppies-2_3c4dIFYFU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      

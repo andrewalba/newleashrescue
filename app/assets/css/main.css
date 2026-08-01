@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Nuxt Icon local collections: Iconify sets class="iconify iconify--…" on the <svg> and drops Tailwind classes from UIcon. */
+svg.iconify[class*="iconify--custom"] {
+    color: inherit;
+}
+svg.iconify[class*="iconify--custom"] :where(path) {
+    fill: currentColor;
+}
+
+@theme {
+    --font-luckiest-guy: 'Luckiest Guy', cursive;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-pt-sans: 'PT Sans', sans-serif;
+    --font-quicksand: 'Quicksand', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --color-primary: var(--color-neon-pink);
+    --color-primary-50: var(--color-neon-pink-50);
+    --color-primary-100: var(--color-neon-pink-100);
+    --color-primary-200: var(--color-neon-pink-200);
+    --color-primary-300: var(--color-neon-pink-300);
+    --color-primary-400: var(--color-neon-pink-400);
+    --color-primary-500: var(--color-neon-pink-500);
+    --color-primary-600: var(--color-neon-pink-600);
+    --color-primary-700: var(--color-neon-pink-700);
+    --color-primary-800: var(--color-neon-pink-800);
+    --color-primary-900: var(--color-neon-pink-900);
+    --color-primary-950: var(--color-neon-pink-950);
+
+    --color-secondary: var(--color-azure-blue);
+    --color-secondary-50: var(--color-azure-blue-50);
+    --color-secondary-100: var(--color-azure-blue-100);
+    --color-secondary-200: var(--color-azure-blue-200);
+    --color-secondary-300: var(--color-azure-blue-300);
+    --color-secondary-400: var(--color-azure-blue-400);
+    --color-secondary-500: var(--color-azure-blue-500);
+    --color-secondary-600: var(--color-azure-blue-600);
+    --color-secondary-700: var(--color-azure-blue-700);
+    --color-secondary-800: var(--color-azure-blue-800);
+    --color-secondary-900: var(--color-azure-blue-900);
+    --color-secondary-950: var(--color-azure-blue-950);
+
+    --color-amber-gold: #ffbe0b;
+    --color-amber-gold-50: #fff8e5;
+    --color-amber-gold-100: #fff1cc;
+    --color-amber-gold-200: #ffe499;
+    --color-amber-gold-300: #ffd666;
+    --color-amber-gold-400: #ffc933;
+    --color-amber-gold-500: #ffbb00;
+    --color-amber-gold-600: #cc9600;
+    --color-amber-gold-700: #997000;
+    --color-amber-gold-800: #664b00;
+    --color-amber-gold-900: #332500;
+    --color-amber-gold-950: #241a00;
+
+    --color-blaze-orange: #fb5607;
+    --color-blaze-orange-50: #ffeee6;
+    --color-blaze-orange-100: #fedccd;
+    --color-blaze-orange-200: #fdba9b;
+    --color-blaze-orange-300: #fd9768;
+    --color-blaze-orange-400: #fc7536;
+    --color-blaze-orange-500: #fb5204;
+    --color-blaze-orange-600: #c94203;
+    --color-blaze-orange-700: #973102;
+    --color-blaze-orange-800: #642102;
+    --color-blaze-orange-900: #321001;
+    --color-blaze-orange-950: #230c01;
+
+    --color-neon-pink: #ff006e;
+    --color-neon-pink-50: #ffe5f1;
+    --color-neon-pink-100: #ffcce2;
+    --color-neon-pink-200: #ff99c5;
+    --color-neon-pink-300: #ff66a8;
+    --color-neon-pink-400: #ff338b;
+    --color-neon-pink-500: #ff006e;
+    --color-neon-pink-600: #cc0058;
+    --color-neon-pink-700: #990042;
+    --color-neon-pink-800: #66002c;
+    --color-neon-pink-900: #330016;
+    --color-neon-pink-950: #24000f;
+
+    --color-blue-violet: #8338ec;
+    --color-blue-violet-50: #f0e8fd;
+    --color-blue-violet-100: #e2d0fb;
+    --color-blue-violet-200: #c5a2f6;
+    --color-blue-violet-300: #a873f2;
+    --color-blue-violet-400: #8b44ee;
+    --color-blue-violet-500: #6e16e9;
+    --color-blue-violet-600: #5811bb;
+    --color-blue-violet-700: #420d8c;
+    --color-blue-violet-800: #2c095d;
+    --color-blue-violet-900: #16042f;
+    --color-blue-violet-950: #0f0321;
+
+    --color-azure-blue: #3a86ff;
+    --color-azure-blue-50: #e5efff;
+    --color-azure-blue-100: #cce0ff;
+    --color-azure-blue-200: #99c0ff;
+    --color-azure-blue-300: #66a1ff;
+    --color-azure-blue-400: #3381ff;
+    --color-azure-blue-500: #0062ff;
+    --color-azure-blue-600: #004ecc;
+    --color-azure-blue-700: #003b99;
+    --color-azure-blue-800: #002766;
+    --color-azure-blue-900: #001433;
+    --color-azure-blue-950: #000e24;
+}
