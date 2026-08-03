@@ -19,6 +19,14 @@ export interface FeatureBlock {
     content: string[]
 }
 
+export interface AdoptionApplication {
+    href:          string
+    filename:      string
+    title:         string
+    icon:          string
+    cta:           string
+}
+
 export function useAdoptData() {
     const adopt = ref<Adopt>({
         content: [
@@ -68,8 +76,25 @@ export function useAdoptData() {
         },
         featureBlocks: featureBlocks.value
     })
+    const adoptionApplication = ref<AdoptionApplication[]>([
+        {
+            href: '/files/NLR-Adoption-Application-20260803.docx',
+            filename: 'NLR-Adoption-Application.docx',
+            title: 'Download the New Leash Rescue dog adoption application',
+            icon: 'i-material-symbols-sound-detection-dog-barking-rounded',
+            cta: 'Download Dog Adoption Application',
+        },
+        {
+            href: '/files/NLR-Cat-Adoption-Application-20260803.docx',
+            filename: 'NLR-Cat-Adoption-Application.docx',
+            title: 'Download the New Leash Rescue cat adoption application',
+            icon: 'i-material-symbols-pets-rounded',
+            cta: 'Download Cat Adoption Application',
+        }
+    ])
     return {
         adopt,
         adoptPolicy,
+        adoptionApplication
     }
 }

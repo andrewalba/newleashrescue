@@ -1,19 +1,22 @@
 <script setup lang="ts">
-const applicationHref = '/files/NLR-Adoption-Application-20191112.docx'
-const applicationFilename = 'NLR-Adoption-Application.docx'
+import { useAdoptData } from "~/composables/useAdoptData";
+const { adoptionApplication } = useAdoptData();
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 px-4">
+    <template v-for="application in adoptionApplication">
     <a
-      :href="applicationHref"
-      :download="applicationFilename"
-      title="Download the New Leash Rescue adoption application"
+      :href="application.href"
+      :download="application.filename"
+      title="application.title"
       class="w-full sm:w-auto py-4 px-6 inline-flex justify-center items-center gap-x-2 text-xl font-medium text-nowrap rounded-xl border border-primary-line text-white bg-primary hover:bg-primary-hover focus:outline-hidden focus:bg-primary-focus transition disabled:opacity-50 disabled:pointer-events-none"
     >
       <UIcon name="i-material-symbols-download-rounded" class="size-6" />
-      Download Adoption Application
+      <UIcon :name="application.icon" class="size-6" />
+      {{ application.cta }}
     </a>
+    </template>
   </div>
 </template>
 

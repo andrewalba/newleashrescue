@@ -14,6 +14,13 @@ export interface FosterBlock {
     img:           Img
 }
 
+export interface FosterApplication {
+    href:          string
+    filename:      string
+    title:         string
+    cta:           string
+}
+
 export function useFosterData() {
     const featureBlocks = ref<FosterBlock[]>([
         {
@@ -68,9 +75,24 @@ export function useFosterData() {
         },
         "featureBlocks": featureBlocks.value
     });
+    const fosterApplication = ref<FosterApplication[]>([
+        {
+            href: "/files/NLR-Foster-Application-20260803.docx",
+            filename: "NLR-Foster-Application.docx",
+            title: "Download the New Leash Rescue foster application",
+            cta: "Download Foster Application"
+        },
+        {
+            href: "/files/NLR-Volunteer-Application-20260803.docx",
+            filename: "NLR-Volunteer-Application.docx",
+            title: "Download the New Leash Rescue volunteer application",
+            cta: "Download Volunteer Application"
+        }
+    ]);
 
     return {
         foster,
         featureBlocks,
+        fosterApplication,
     }
 }
